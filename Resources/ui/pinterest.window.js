@@ -20,7 +20,7 @@ exports.create = function() {
 			width : w / 2,
 			touchEnabled : false,
 			height : 25,
-			backgroundColor : 'black',
+			backgroundColor : 'black',   
 			opacity : 0.5
 		}));
 		self.add(Ti.UI.createLabel({
