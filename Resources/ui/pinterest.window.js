@@ -16,11 +16,12 @@ exports.create = function() {
 			image : _v.image
 		}));
 		self.add(Ti.UI.createView({
-			left : 0,bottom:0,
+			left : 0,
+			bottom : 0,
 			width : w / 2,
 			touchEnabled : false,
 			height : 25,
-			backgroundColor : 'black',   
+			backgroundColor : 'black',
 			opacity : 0.5
 		}));
 		self.add(Ti.UI.createLabel({
@@ -73,8 +74,16 @@ exports.create = function() {
 	self.add(self.containers[1]);
 	for (var i = 0; i < 2; i++)
 		self.containers[i].addEventListener('click', function(_e) {
-			var id = _e.source.itemId.toLowerCase().replace(/[^a-z]+/g, '-').replace(/[\-]+/g, '-').replace(/\-$/,'');
-			console.log(id);
+			var id = _e.source.itemId.toLowerCase().replace(/[^a-z]+/g, '-').replace(/[\-]+/g, '-').replace(/\-$/, '');
+			var web = Ti.UI.createWebView({
+				url : 'http://pinterest.com/ergobaby/' + id
+			});
+			var win = Ti.UI.createWindow({
+				fullscreen : true,
+				title : _e.source.itemId
+			});
+			win.add(web);
+			win.open();
 		});
 
 	return self;
