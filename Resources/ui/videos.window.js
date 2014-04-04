@@ -15,6 +15,7 @@ exports.create = function() {
 			left : 0,
 			width : 160,
 			touchEnabled : false,
+			defaultImage : '/assets/logo.png',
 			height : 100,
 			image : 'https://i1.ytimg.com/vi/' + _v.id + '/mqdefault.jpg'
 		}));

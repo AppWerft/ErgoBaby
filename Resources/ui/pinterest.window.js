@@ -13,7 +13,8 @@ exports.create = function() {
 			itemId : _v,
 			touchEnabled : false,
 			height : w / 2 * 146 / 216,
-			image : _v.image
+			image : _v.image,
+			defaultImage : '/assets/logo.png'
 		}));
 		self.add(Ti.UI.createView({
 			left : 0,
@@ -74,12 +75,11 @@ exports.create = function() {
 	self.add(self.containers[1]);
 	for (var i = 0; i < 2; i++)
 		self.containers[i].addEventListener('click', function(_e) {
-			var id = _e.source.itemId.toLowerCase().replace(/[^a-z]+/g, '-').replace(/[\-]+/g, '-').replace(/\-$/, '');
+			var id = _e.source.itemId.toLowerCase().replace(/[^a-z]+/g, '-').replace(/[\-]+/g, '-').replace(/^\-/, '').replace(/\-$/, '');
 			var web = Ti.UI.createWebView({
 				url : 'http://pinterest.com/ergobaby/' + id
 			});
-			var win = Ti.UI.createWindow({
-				fullscreen : true,
+			var win = require('vendor/window').create({
 				title : _e.source.itemId
 			});
 			win.add(web);
