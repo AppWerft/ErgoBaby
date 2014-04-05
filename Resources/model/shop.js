@@ -2,6 +2,48 @@ module.exports = [{
 	title : "Original Kollektion",
 	image : "http://www.ergobaby.de/media/catalog/product/cache/11/thumbnail/100x/9df78eab33525d08d6e5fb8d27136e95/b/c/bc6canl_l_1.jpg",
 	description : "Unsere preisgekrönte Original Kollektion ist so bequem wie noch nie. Die Original Kollektion ist mit ihrer großen Bandbreite an Farben und Designs die perfekte Wahl für tägliche Abenteuer.",
+	items : [{
+		title : "Von-Geburt-An Paket",
+		color : "Galaxy Grey",
+		price : "129,90 €",
+		image : "http://www.ergobaby.de/media/catalog/product/cache/11/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/b/u/bundle_of_joy_galaxy_grey_rgb.jpg"
+	}, {
+		title : "Von-Geburt-An Paket",
+		color : "Black/Camel",
+		price : "119,90 €",
+		image : "http://www.ergobaby.de/media/catalog/product/cache/11/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/b/u/bundle_of_joy_blackcamel.jpg"
+	}, {
+		title : "Original Carrier - Zebra",
+		color : "",
+		price : "119,90 €",
+		image : "http://www.ergobaby.de/media/catalog/product/cache/11/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/b/c/bczeb001nl_l.jpg"
+	}, {
+		title : "Von-Geburt-An Paket",
+		color : "Galaxy Grey",
+		price : "129,90 €",
+		image : "http://www.ergobaby.de/media/catalog/product/cache/11/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/b/c/bc2epnl_l.jpg"
+	}, {
+		title : "",
+		color : "",
+		price : "",
+		image : ""
+	}, {
+		title : "",
+		color : "",
+		price : "",
+		image : ""
+	}, {
+		title : "",
+		color : "",
+		price : "",
+		image : ""
+	}, {
+		title : "",
+		color : "",
+		price : "",
+		image : ""
+	}]
+
 }, {
 	title : "Organic Kollektion",
 	image : "http://www.ergobaby.de/media/catalog/product/cache/11/thumbnail/100x/9df78eab33525d08d6e5fb8d27136e95/b/c/bc9todck_l.jpg",

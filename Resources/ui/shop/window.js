@@ -30,8 +30,8 @@ exports.create = function() {
 		});
 	}
 	self.listview.getSections()[0].setItems(rows);
-	self.listview.addEventListener('itemclick',function(_e){
-		require('vendor/window').create({title:_e.itemId}).open();
+	self.listview.addEventListener('itemclick', function(_e) {
+		require('ui/shop/list').create(_e.itemId).open();
 	});
 	return self;
 };
