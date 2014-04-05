@@ -1,84 +1,54 @@
-Ti.Map = require('ti.map');
-
 exports.create = function() {
 	var options = arguments[0] || {};
-	var ready = false;
-	var pins = [];
+	var done, pois = require('controls/poi.adapter').get();
 	var self = Ti.UI.createWindow({
-		fullscreen : true
-	});
-	self.container = Ti.UI.createScrollableView();
-	self.add(self.container);
-	self.mapview = Ti.Map.createView({
-		mapType : Ti.Map.TERRAIN_TYPE,
-		enableZoomControls : false,
-		region : {
-			latitude : 53.5270540,
-			longitude : 10,
-			latitudeDelta : 5,
-			longitudeDelta : 5
-		},
-		//animate : true,
-		//	regionFit : true,
-		userLocation : true
-	});
-	self.listview = Ti.UI.createListView({
-		sections : [Ti.UI.createListSection({
-			headerTitle : 'Germany'
-		})],
+		fullscreen : true,
 		backgroundColor : 'white'
 	});
-
-	self.addEventListener('open', function() {
-		if (!ready) {
-			self.container.addView(self.mapview);
-			self.container.addView(self.listview);
-
-			ready = true;
-		}
-		var pois = require('model/poi').de;
-		var annotations = [];
-		var ndx = 0;
-		for (var i in pois) {
-			if (ndx % 10 == 0) {
-				annotations.push(Ti.Map.createAnnotation({
-					latitude : pois[i].lat,
-					longitude : pois[i].lng,
-					title : pois[i].title,
-					image : '/assets/appicon.png',
-					subtitle : pois[i].address
-				}));
-			}
-			ndx++;
-		}
-		self.mapview.addAnnotations(annotations);
-		ndx=0;
-		setTimeout(function() {
-			annotations = [];
-			for (var i in pois) {
-				if (ndx % 10 != 0) {
-					annotations.push(Ti.Map.createAnnotation({
-						latitude : pois[i].lat,
-						longitude : pois[i].lng,
-						title : pois[i].title,
-						image : '/assets/appicon.png',
-						subtitle : pois[i].address
-					}));
-				}
-				ndx++;
-			}
-			self.mapview.addAnnotations(annotations);
-		}, 200);
+	self.flags = Ti.UI.createScrollView({
+		scrollType : 'horizontal',
+		layout : 'horizontal',
+		backgroundColor : '#333',
+		horizontalWrap : false,
+		height : '50dp',
+		touchEnabled : false,
+		bottom : 0
 	});
-	self.addEventListener('blur', function() {
-		//self.mapview.removeAllAnnotations(pins);
+	var dir = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/assets/flags/').getDirectoryListing();
+	for (var i = 0; i < dir.length; i++) {
+		self.flags.add(Ti.UI.createImageView({
+			top : 0,
+			left : 0,
+			width : '60dp',
+			right : '2dp',
+			height : '50dp',
+			image : '/assets/flags/' + dir[i],
+			country : dir[i].replace(/\.png$/, '')
+		}));
+	}
+	self.add(self.flags);
+	self.container = Ti.UI.createScrollableView({
+		bottom : '50dp',
+		height : Ti.UI.FILL
 	});
-	self.mapview.addEventListener('click', function(_e) {
-		if (_e.annotation && (_e.clicksource != 'pin')) {
-			self.container.scrollToView(1);
+	self.add(self.container);
+	self.addEventListener('focus', function() {
+		if (!done) {
+			self.container.addView(require('ui/mapview.widget').create(pois));
+			self.container.addView(require('ui/dealer.listview').create(pois));
+			self.container.getViews()[0].addEventListener('click', function(_e) {
+			if (_e.annotation && (_e.clicksource != 'pin')) {
+				self.container.scrollToView(1);
+			}
+	});
 		}
+		done = true;
+	});
+	self.flags.addEventListener('click', function(_e) {
+		Ti.UI.createNotification({
+			message : _e.source.country
+		}).show();
 	});
 	return self;
-
 };
 

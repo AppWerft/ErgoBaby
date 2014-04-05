@@ -1,7 +1,7 @@
 exports.create = function() {
 	var args = arguments[0] || {};
 	var self = Ti.UI.createWindow({
-		fullscreen : true
+		fullscreen : true,backgroundColor:'white'
 	});
 	self.addEventListener("open", function() {
 		if (Ti.Android) {

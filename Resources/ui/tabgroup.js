@@ -7,6 +7,10 @@ exports.create = function() {// this sets the background color of the master UIV
 		title : 'Dealer',
 		window : require('ui/map.window').create()
 	});
+	var tab0 = Titanium.UI.createTab({
+		title : 'Shop',
+		window : require('ui/shop/window').create()
+	});
 	var tab2 = Titanium.UI.createTab({
 		title : 'Videos',
 		window : require('ui/videos.window').create()
@@ -31,8 +35,9 @@ exports.create = function() {// this sets the background color of the master UIV
 		window : require('ui/facebook.window').create()
 	});
 	self.addTab(tab2);
-	self.addTab(tab5);
+	self.addTab(tab0);
 	self.addTab(tab1);
+	self.addTab(tab5);
 	self.addTab(tab4);
 	self.addTab(tab6);
 	self.addEventListener('open', function() {

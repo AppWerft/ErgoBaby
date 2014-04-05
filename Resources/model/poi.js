@@ -2311,7 +2311,7 @@ exports.de ={
 	},
 	"386": {
 		"title": "XXXLutz",
-		"address": "N?\\u00barnberg Ingolst?\\u00a7dter Straße 20",
+		"address": "N?\\u00barnberg Ingolstädter Straße 20",
 		"lng": "11.0904344",
 		"lat": "49.4269378"
 	},
@@ -2394,7 +2394,7 @@ exports.de ={
 		"lat": "49.7231738"
 	},
 	"400": {
-		"title": "Kirschb?&sect;umchen",
+		"title": "Kirschbäumchen",
 		"address": "Oberhausen-Rheinhausen Hauptstraße 11",
 		"lng": "8.4735688",
 		"lat": "49.2809886"
@@ -2407,7 +2407,7 @@ exports.de ={
 	},
 	"402": {
 		"title": "Menschenskind",
-		"address": "Wagh?\\u00a7usel-Kirrlach Schwetzinger Straße 22-26",
+		"address": "Waghäusel-Kirrlach Schwetzinger Straße 22-26",
 		"lng": "8.5419472",
 		"lat": "49.2459891"
 	},
@@ -2569,7 +2569,7 @@ exports.de ={
 	},
 	"429": {
 		"title": "Engel Apotheke",
-		"address": "Regensburg T?\\u00a7ndlergasse 22-24",
+		"address": "Regensburg Tändlergasse 22-24",
 		"lng": "12.09581",
 		"lat": "49.01892"
 	},
@@ -2922,8 +2922,8 @@ exports.de ={
 		"lat": "48.34556"
 	},
 	"488": {
-		"title": "Eddy&not;&yen;s Kinderland Lahr",
-		"address": "Lahr Im G??tzmann 7",
+		"title": "Eddy's Kinderland Lahr",
+		"address": "Lahr Im Götzmann 7",
 		"lng": "7.84492",
 		"lat": "48.3328"
 	},
