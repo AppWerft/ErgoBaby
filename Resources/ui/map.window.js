@@ -1,6 +1,6 @@
 exports.create = function() {
 	var options = arguments[0] || {};
-	var done, pois = require('controls/poi.adapter').get();
+	var done, pois = Ti.App.POIs.getAll();
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
 		backgroundColor : 'white'
@@ -32,18 +32,18 @@ exports.create = function() {
 		height : Ti.UI.FILL
 	});
 	self.add(self.container);
-	self.addEventListener('focus', function() {
+	//self.addEventListener('open', function() {
 		if (!done) {
 			self.container.addView(require('ui/mapview.widget').create(pois));
 			self.container.addView(require('ui/dealer.listview').create(pois));
 			self.container.getViews()[0].addEventListener('click', function(_e) {
-			if (_e.annotation && (_e.clicksource != 'pin')) {
-				self.container.scrollToView(1);
-			}
-	});
+				if (_e.annotation && (_e.clicksource != 'pin')) {
+					self.container.scrollToView(1);
+				}
+			});
 		}
 		done = true;
-	});
+	//});
 	self.flags.addEventListener('click', function(_e) {
 		Ti.UI.createNotification({
 			message : _e.source.country
