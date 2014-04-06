@@ -78,7 +78,8 @@
     <modules>
         <module platform="iphone">ti.map</module>
         <module platform="android">ti.map</module>
-        <module platform="android">titutorial.youtubeplayer</module>
+        <module platform="iphone">ti.draggable</module>
+        <module platform="android">ti.draggable</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>

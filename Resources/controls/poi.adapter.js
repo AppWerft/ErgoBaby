@@ -1,21 +1,90 @@
 var POIs = function() {
 	this.poismap = require('model/poi').de;
-	this.lastlocation = null;
+	this.lastlocation;
 	if (Ti.Geolocation.lastGeolocation) {
-		console.log('Info: lastlocation detected');
 		this.lastlocation = JSON.parse(Ti.Geolocation.lastGeolocation);
-	};
+	} else
+		console.log('Info: "lastlocation" empty');
 	var that = this;
-	Ti.Geolocation.addEventListener('location', function(_e) {
+	Ti.Geolocation.getCurrentPosition(function(_e) {
 		if (_e.success) {
-			console.log('Info: location detected');
+			console.log('Info: location from hardware detected');
 			Ti.UI.createNotification({
 				message : 'Your location detected.'
 			}).show();
 			that.lastlocation = _e.coords;
-		}
+			Ti.App.Properties.setObject('LASTLOCATION', _e.coords);
+			Ti.App.fireEvent('app:geolocation_ready', _e.coords);
+		} else
+			console.log('Info: lastlocation error');
 	});
 	return this;
+};
+
+POIs.prototype.getRegion = function(_args) {
+	return {
+		latitude : parseFloat(_args.lat) / 2 + parseFloat(this.lastlocation.latitude) / 2,
+		latitudeDelta : 1.2 * Math.abs(parseFloat(_args.lat) - parseFloat(this.lastlocation.latitude)),
+		longitude : (parseFloat(_args.lng) + parseFloat(this.lastlocation.longitude)) / 2,
+		longitudeDelta : 1.2 * Math.abs(parseFloat(_args.lng) - parseFloat(this.lastlocation.longitude))
+	};
+};
+
+POIs.prototype.getRoute = function(_args, _callbacks) {
+	var decodeLine = function(encoded) {
+		var len = encoded.length;
+		var index = 0;
+		var array = [];
+		var lat = 0;
+		var lng = 0;
+		while (index < len) {
+			var b;
+			var shift = 0;
+			var result = 0;
+			do {
+				b = encoded.charCodeAt(index++) - 63;
+				result |= (b & 0x1f) << shift;
+				shift += 5;
+			} while (b >= 0x20);
+			var dlat = ((result & 1) ? ~(result >> 1) : (result >> 1));
+			lat += dlat;
+
+			shift = 0;
+			result = 0;
+			do {
+				b = encoded.charCodeAt(index++) - 63;
+				result |= (b & 0x1f) << shift;
+				shift += 5;
+			} while (b >= 0x20);
+			var dlng = ((result & 1) ? ~(result >> 1) : (result >> 1));
+			lng += dlng;
+			array.push([lat * 1e-5, lng * 1e-5]);
+		}
+		var points = [];
+		for (var i = 0; i < array.length; i++) {
+			points.push({
+				"latitude" : array[i][0],
+				"longitude" : array[i][1]
+			});
+		}
+		return points;
+	};
+	var client = Ti.Network.createHTTPClient({
+		onload : function() {
+			var route = JSON.parse(this.responseText).routes[0];
+			var res = {
+				legs : route,
+				route: decodeLine(route['overview_polyline'].points)
+			};
+			_callbacks.onload(res);
+		}
+	});
+	var url = 'https://maps.googleapis.com/maps/api/directions/json?language=en&sensor=false'//
+	+ '&origin=' + this.lastlocation.latitude + ',' + this.lastlocation.longitude//
+	+ '&destination=' + _args.lat + ',' + _args.lng;
+	console.log(url);
+	client.open('GET', url);
+	client.send();
 };
 
 POIs.prototype.getAll = function(_args) {
@@ -33,7 +102,6 @@ POIs.prototype.getAll = function(_args) {
 	for (var i in this.poismap) {
 		pois.push(this.poismap[i]);
 	}
-	console.log(this.lastlocation);
 	if (this.lastlocation == null)
 		return pois;
 	else {
