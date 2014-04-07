@@ -4,7 +4,7 @@ exports.create = function() {// this sets the background color of the master UIV
 		fullscreen : true
 	});
 	var tab1 = Titanium.UI.createTab({
-		title : 'Dealer',
+		title : 'Vendors',
 		window : require('ui/map.window').create()
 	});
 	var tab0 = Titanium.UI.createTab({

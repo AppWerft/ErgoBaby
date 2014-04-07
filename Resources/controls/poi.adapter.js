@@ -23,9 +23,9 @@ var POIs = function() {
 POIs.prototype.getRegion = function(_args) {
 	return {
 		latitude : parseFloat(_args.lat) / 2 + parseFloat(this.lastlocation.latitude) / 2,
-		latitudeDelta : 1.2 * Math.abs(parseFloat(_args.lat) - parseFloat(this.lastlocation.latitude)),
+		latitudeDelta : 1.4 * Math.abs(parseFloat(_args.lat) - parseFloat(this.lastlocation.latitude)),
 		longitude : (parseFloat(_args.lng) + parseFloat(this.lastlocation.longitude)) / 2,
-		longitudeDelta : 1.2 * Math.abs(parseFloat(_args.lng) - parseFloat(this.lastlocation.longitude))
+		longitudeDelta : 1.4 * Math.abs(parseFloat(_args.lng) - parseFloat(this.lastlocation.longitude))
 	};
 };
 
@@ -71,9 +71,20 @@ POIs.prototype.getRoute = function(_args, _callbacks) {
 	var client = Ti.Network.createHTTPClient({
 		onload : function() {
 			var route = JSON.parse(this.responseText).routes[0];
+			console.log(route.legs[0]);
 			if (route)
 				_callbacks.onload({
-					legs : route,
+					steps : route.legs[0].steps,
+					meta : route.legs[0].distance.text +'\n'+route.legs[0].duration.text,
+					"end_address" : route.legs[0]['end_address'],
+					"start_address" : route.legs[0]['start_address'],
+					region: {
+						latitude : (route.bounds.northeast.lat + route.bounds.southwest.lat) / 2,
+						longitude : (route.bounds.northeast.lng + route.bounds.southwest.lng) / 2,
+						latitudeDelta : 1.2*Math.abs(route.bounds.northeast.lat - route.bounds.southwest.lat),
+						longitudeDelta : 1.2*Math.abs(route.bounds.northeast.lng - route.bounds.southwest.lng)
+					},
+					
 					route : decodeLine(route['overview_polyline'].points)
 				});
 			else
@@ -124,3 +135,4 @@ POIs.prototype.getAll = function(_args) {
 };
 
 module.exports = POIs;
+

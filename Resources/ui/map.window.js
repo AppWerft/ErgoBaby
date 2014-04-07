@@ -35,7 +35,7 @@ exports.create = function() {
 	//self.addEventListener('open', function() {
 		if (!done) {
 			self.container.addView(require('ui/mapview.widget').create(pois));
-			self.container.addView(require('ui/dealer.listview').create(pois));
+			self.container.addView(require('ui/vendors.listview').create(pois));
 			self.container.getViews()[0].addEventListener('click', function(_e) {
 				if (_e.annotation && (_e.clicksource != 'pin')) {
 					self.container.scrollToView(1);

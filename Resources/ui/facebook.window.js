@@ -6,8 +6,6 @@ exports.create = function() {
 		fullscreen : true
 	});
 	self.add(web);
-
 	return self;
-
 };
 
