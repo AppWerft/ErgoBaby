@@ -1,6 +1,6 @@
 exports.babydealer = {
 	properties : {
-		height : Ti.UI.SIZE,
+		height : Ti.UI.SIZE
 	},
 	childTemplates : [{
 		type : 'Ti.UI.ImageView',
@@ -25,7 +25,7 @@ exports.babydealer = {
 			type : 'Ti.UI.Label',
 			bindId : 'title',
 			properties : {
-				color : '#333',
+				color : '#ccc',
 				width : Ti.UI.FILL,
 				height : Ti.UI.SIZE,
 				font : {
@@ -39,7 +39,7 @@ exports.babydealer = {
 			type : 'Ti.UI.Label',
 			bindId : 'address',
 			properties : {
-				color : '#333',
+				color : '#fff',
 				text : 'Address',
 				font : {
 					fontSize : '14dp'
@@ -47,20 +47,20 @@ exports.babydealer = {
 				},
 				height : Ti.UI.SIZE,
 				left : 0,
-				top : '1dp'
+				top : 0
 			}
 		}, {
 			type : 'Ti.UI.Label',
 			bindId : 'dist',
 			properties : {
-				color : '#333',
+				color : 'orange',
 				width : Ti.UI.FILL,
 				height : Ti.UI.SIZE,
 				font : {
-					fontSize : '12dp',
+					fontSize : '10dp',
 				},
 				right : 0,
-				top : '5dp'
+				top : 0
 			}
 		}]
 	}]
@@ -161,6 +161,43 @@ exports.items = {
 			left : '60dip',
 			right : '20dp',
 			bottom : '6dip'
+		}
+	}]
+};
+
+
+exports.steps = {
+	properties : {
+		height : Ti.UI.SIZE,
+		layout : 'vertical'
+	},
+	childTemplates : [{
+		type : 'Ti.UI.Label',
+		bindId : 'title',
+		properties : {
+			color : 'orange',
+			width : Ti.UI.FILL,
+			height : '45dip',
+			font : {
+				fontSize : '19dp',
+				fontWeight : 'bold'
+			},
+			left : '60dp',
+			top : 0
+		}
+	}, {
+		type : 'Ti.UI.Label',
+		bindId : 'meta',
+		properties : {
+			color : '#333',
+
+			font : {
+				fontSize : '14dp'
+			},
+			left : '60dip',
+			right : '20dp',
+			top : '36dip',
+			bottom : '20dp'
 		}
 	}]
 };

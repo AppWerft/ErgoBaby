@@ -5,7 +5,7 @@ exports.create = function() {// this sets the background color of the master UIV
 	});
 	var tab1 = Titanium.UI.createTab({
 		title : 'Vendors',
-		window : require('ui/map.window').create()
+		window : require('ui/vendorsmapandlist.window').create()
 	});
 	var tab0 = Titanium.UI.createTab({
 		title : 'Shop',

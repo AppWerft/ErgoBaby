@@ -1,9 +1,10 @@
-Ti.Map = require('ti.map');
-exports.create = function(pois) {
-	var annotations1 = annotations2 = [], done = false;
+exports.create = function(pois, RATIO) {
+	Ti.Map = require('ti.map');
+	var annotations1 = annotations2 = [];
 	var self = Ti.Map.createView({
 		mapType : Ti.Map.TERRAIN_TYPE,
 		enableZoomControls : false,
+		top : 0,
 		region : {
 			latitude : 53.5270540,
 			longitude : 10,
@@ -11,44 +12,45 @@ exports.create = function(pois) {
 			longitudeDelta : 2
 		},
 		animate : false,
+		height : RATIO,
 		userLocation : true
 	});
 	Ti.UI.createNotification({
-			message : 'Adding of dealers'
-		}).show();
+		message : 'Adding of ' + pois.length + ' vendors'
+	}).show();
 	self.addEventListener('complete', function() {
-		
-		for (var i = 0; i < pois.length && i<100; i++) {
+		for (var i = 0; i < pois.length && i < 100; i++) {
+			var p = pois[i];
 			annotations1.push(Ti.Map.createAnnotation({
-				latitude : pois[i].lat,
-				longitude : pois[i].lng,
-				title : pois[i].title,
+				latitude : p.lat,
+				longitude : p.lng,
+				title : p.title,
 				image : '/assets/appicon.png',
-				subtitle : pois[i].address
+				subtitle : p.address.replace(/\n/g,' '),
+				itemId : JSON.stringify(p)
 			}));
-			/*self.addAnnotation(Ti.Map.createAnnotation({
-				latitude : pois[i].lat,
-				longitude : pois[i].lng,
-				title : pois[i].title,
-				image : '/assets/appicon.png',
-				subtitle : pois[i].address
-			}));**/
 		}
 		self.addAnnotations(annotations1);
-		
 		setTimeout(function() {
 			for (var i = 100; i < pois.length; i++) {
+				var p = pois[i];
 				annotations2.push(Ti.Map.createAnnotation({
-					latitude : pois[i].lat,
-					longitude : pois[i].lng,
-					title : pois[i].title,
+					latitude : p.lat,
+					longitude : p.lng,
+					title : p.title,
 					image : '/assets/appicon.png',
-					subtitle : pois[i].address
+					subtitle : p.address.replace(/\n/g,' '),
+					itemId : JSON.stringify(p)
 				}));
 			}
 			self.addAnnotations(annotations2);
 			self.selectAnnotation(annotations1[0]);
-		}, 500);
+		}, 2000);
+	});
+	self.addEventListener('click', function(_e) {
+		if (_e.annotation && (_e.clicksource != 'pin')) {
+			require('ui/vendorpath2.window').create(JSON.parse(_e.annotation.itemId)).open();
+		}
 	});
 
 	return self;

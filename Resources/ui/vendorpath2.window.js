@@ -53,6 +53,13 @@ exports.create = function(_args) {
 		image : '/assets/appicon.png'
 	}));
 	self.listview = Ti.UI.createListView({
+		sections : [Ti.UI.createListSection({
+			headerTitle : 'Germany',
+		})],
+		templates : {
+			'template' : require('ui/TEMPLATES').steps
+		},
+		defaultItemTemplate : 'template',
 		top : '80%'
 	});
 	self.add(self.mapview);

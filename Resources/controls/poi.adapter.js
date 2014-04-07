@@ -29,6 +29,31 @@ POIs.prototype.getRegion = function(_args) {
 	};
 };
 
+POIs.prototype.resolveAddress = function(_country, _callback) {
+	var client = Ti.Network.createHTTPClient({
+		onload : function() {
+			try {
+				var json = JSON.parse(this.responseText);
+				if (json.status == 'OK') {
+					var result =  json.results[0].geometry;
+					var region = {
+						latitude : result.location.lat,
+						longitude : result.location.lng,
+						latitudeDelta : Math.abs(result.viewport.northeast.lat - result.viewport.southwest.lat),
+						longitudeDelta : Math.abs(result.viewport.northeast.lng - result.viewport.southwest.lng)
+					};
+					_callback(region);
+				}
+			} catch (E) {
+				console.log('Error: ' + E);
+			}
+		}
+	});
+	var url = 'http://maps.googleapis.com/maps/api/geocode/json?address=' + _country + '&sensor=false';
+	client.open('GET', url);
+	client.send();
+};
+
 POIs.prototype.getRoute = function(_args, _callbacks) {
 	var decodeLine = function(encoded) {
 		var len = encoded.length;
@@ -75,16 +100,16 @@ POIs.prototype.getRoute = function(_args, _callbacks) {
 			if (route)
 				_callbacks.onload({
 					steps : route.legs[0].steps,
-					meta : route.legs[0].distance.text +'\n'+route.legs[0].duration.text,
+					meta : route.legs[0].distance.text + '\n' + route.legs[0].duration.text,
 					"end_address" : route.legs[0]['end_address'],
 					"start_address" : route.legs[0]['start_address'],
-					region: {
+					region : {
 						latitude : (route.bounds.northeast.lat + route.bounds.southwest.lat) / 2,
 						longitude : (route.bounds.northeast.lng + route.bounds.southwest.lng) / 2,
-						latitudeDelta : 1.2*Math.abs(route.bounds.northeast.lat - route.bounds.southwest.lat),
-						longitudeDelta : 1.2*Math.abs(route.bounds.northeast.lng - route.bounds.southwest.lng)
+						latitudeDelta : 1.2 * Math.abs(route.bounds.northeast.lat - route.bounds.southwest.lat),
+						longitudeDelta : 1.2 * Math.abs(route.bounds.northeast.lng - route.bounds.southwest.lng)
 					},
-					
+
 					route : decodeLine(route['overview_polyline'].points)
 				});
 			else
