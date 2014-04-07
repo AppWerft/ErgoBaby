@@ -1,6 +1,5 @@
 var POIs = function() {
 	this.poismap = require('model/poi').de;
-	this.lastlocation;
 	if (Ti.Geolocation.lastGeolocation) {
 		this.lastlocation = JSON.parse(Ti.Geolocation.lastGeolocation);
 	} else
@@ -72,14 +71,17 @@ POIs.prototype.getRoute = function(_args, _callbacks) {
 	var client = Ti.Network.createHTTPClient({
 		onload : function() {
 			var route = JSON.parse(this.responseText).routes[0];
-			var res = {
-				legs : route,
-				route: decodeLine(route['overview_polyline'].points)
-			};
-			_callbacks.onload(res);
+			if (route)
+				_callbacks.onload({
+					legs : route,
+					route : decodeLine(route['overview_polyline'].points)
+				});
+			else
+				_callbacks.onerror();
 		}
 	});
 	var url = 'https://maps.googleapis.com/maps/api/directions/json?language=en&sensor=false'//
+	+ '&mode=' + _args.mode// '
 	+ '&origin=' + this.lastlocation.latitude + ',' + this.lastlocation.longitude//
 	+ '&destination=' + _args.lat + ',' + _args.lng;
 	console.log(url);

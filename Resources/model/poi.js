@@ -1,199 +1,199 @@
 exports.de ={
 	"1": {
 		"title": "Spiele Max Hamburg",
-		"address": "Hamburg Hamburger Straße 19-47",
+		"address": "Hamburg\nHamburger Straße 19-47",
 		"lng": "9.9936818",
 		"lat": "53.5510846"
 	},
 	"2": {
 		"title": "Jako-O GmbH Hamburg",
-		"address": "Hamburg Kreuslerstraße 2 - 8",
+		"address": "Hamburg\nKreuslerstraße 2 - 8",
 		"lng": "9.997708",
 		"lat": "53.5503029"
 	},
 	"3": {
 		"title": "Baby Walz Hamburg",
-		"address": "Hamburg Caffamacherreihe 8-10",
+		"address": "Hamburg\nCaffamacherreihe 8-10",
 		"lng": "9.9845512",
 		"lat": "53.5555208"
 	},
 	"4": {
 		"title": "Nasenbär",
-		"address": "Hamburg Stresemannstraße 71",
+		"address": "Hamburg\nStresemannstraße 71",
 		"lng": "9.95945",
 		"lat": "53.56051"
 	},
 	"5": {
 		"title": "Das Kleine Kinderkaufhaus e.K.",
-		"address": "Hamburg Hegestr.13",
+		"address": "Hamburg\nHegestr.13",
 		"lng": "9.9817",
 		"lat": "53.58349"
 	},
 	"6": {
 		"title": "Baby-Etage GmbH",
-		"address": "Hamburg Lehmweg 36",
+		"address": "Hamburg\nLehmweg 36",
 		"lng": "9.97985",
 		"lat": "53.5834"
 	},
 	"7": {
 		"title": "Milchzahn",
-		"address": "Hamburg Lehmweg 43",
+		"address": "Hamburg\nLehmweg 43",
 		"lng": "9.9804",
 		"lat": "53.58437"
 	},
 	"8": {
 		"title": "Baby Mobil",
-		"address": "Hamburg Dorotheenstr. 107",
+		"address": "Hamburg\nDorotheenstr. 107",
 		"lng": "10.00488",
 		"lat": "53.587"
 	},
 	"9": {
 		"title": "Kleine Welt GmbH & Co.KG",
-		"address": "Hamburg Osterstraße 166",
+		"address": "Hamburg\nOsterstraße 166",
 		"lng": "9.9469458",
 		"lat": "53.5786572"
 	},
 	"10": {
 		"title": "Globetrotter Hamburg",
-		"address": "Hamburg Wiesendamm 1",
+		"address": "Hamburg\nWiesendamm 1",
 		"lng": "10.04601",
 		"lat": "53.586315"
 	},
 	"11": {
-		"title": "BabyOne Hamburg Wandsbek",
-		"address": "Hamburg BabyOne Hamburg GmbH",
+		"title": "BabyOne Hamburg\nWandsbek",
+		"address": "Hamburg\nBabyOne Hamburg\nGmbH",
 		"lng": "10.0807485",
 		"lat": "53.5754959"
 	},
 	"12": {
-		"title": "Spiele Max Hamburg - Billstedt",
-		"address": "Hamburg - Billstedt Billstedter Haupstr. 59",
+		"title": "Spiele Max Hamburg\n- Billstedt",
+		"address": "Hamburg\n- Billstedt Billstedter Haupstr. 59",
 		"lng": "10.103859",
 		"lat": "53.5392616"
 	},
 	"13": {
-		"title": "BabyOne Hamburg Fuhlsbüttel",
-		"address": "Hamburg Alsterkrugchausee 533",
+		"title": "BabyOne Hamburg\nFuhlsbüttel",
+		"address": "Hamburg\nAlsterkrugchausee 533",
 		"lng": "10.01175",
 		"lat": "53.62804"
 	},
 	"14": {
-		"title": "BabyOne Hamburg Osdorf",
-		"address": "Hamburg Osdorfer Landstraße 108",
+		"title": "BabyOne Hamburg\nOsdorf",
+		"address": "Hamburg\nOsdorfer Landstraße 108",
 		"lng": "9.8639523",
 		"lat": "53.5721916"
 	},
 	"15": {
-		"title": "Pro-Baby Hamburg Prinz Gmbh",
-		"address": "Hamburg Lüneburger Straße 39",
+		"title": "Pro-Baby Hamburg\nPrinz Gmbh",
+		"address": "Hamburg\nLüneburger Straße 39",
 		"lng": "9.9822394",
 		"lat": "53.4599674"
 	},
 	"16": {
 		"title": "BabyOne",
-		"address": "Hamburg Gro&moorbogen 15",
+		"address": "Hamburg\nGroßmoorbogen 15",
 		"lng": "10.00928",
 		"lat": "53.45642"
 	},
 	"17": {
-		"title": "BabyOne Hamburg Halstenbek",
-		"address": "Halstenbek Gärtnerstrasse 150",
+		"title": "BabyOne Hamburg\nHalstenbek",
+		"address": "Halstenbek\nGärtnerstrasse 150",
 		"lng": "9.86679",
 		"lat": "53.62731"
 	},
 	"18": {
-		"title": "BabyOne Hamburg Sasel",
-		"address": "Hamburg Saseler Chausee 128",
+		"title": "BabyOne Hamburg\nSasel",
+		"address": "Hamburg\nSaseler Chausee 128",
 		"lng": "10.1026204",
 		"lat": "53.6474182"
 	},
 	"19": {
 		"title": "Pinocchio",
-		"address": "Seevetal - Meckelfeld Am Felde 4",
+		"address": "Seevetal - Meckelfeld\nAm Felde 4",
 		"lng": "10.0225956",
 		"lat": "53.4204392"
 	},
 	"20": {
 		"title": "Annika & Jan Grabe und Schnohr",
-		"address": "Hamburg Stuhlrohrstr. 10",
+		"address": "Hamburg\nStuhlrohrstr. 10",
 		"lng": "10.20454",
 		"lat": "53.48715"
 	},
 	"21": {
 		"title": "Baby Walz Hamburg",
-		"address": "Hamburg Eulenkrugstrasse 55-5",
+		"address": "Hamburg\nEulenkrugstrasse 55-5",
 		"lng": "10.16895",
 		"lat": "53.6479"
 	},
 	"22": {
 		"title": "Theolino",
-		"address": "Quickborn Am Freibad 4a",
+		"address": "Quickborn\nAm Freibad 4a",
 		"lng": "9.8996475",
 		"lat": "53.7318038"
 	},
 	"23": {
 		"title": "Bunte Kinderkiste",
-		"address": "Buxtehude Hauptstr.11",
+		"address": "Buxtehude\nHauptstr.11",
 		"lng": "9.6896216",
 		"lat": "53.4690625"
 	},
 	"24": {
 		"title": "BabyOne Buchholz",
-		"address": "Buchholz Harburger Str. 17",
+		"address": "Buchholz\nHarburger Str. 17",
 		"lng": "9.8729",
 		"lat": "53.36408"
 	},
 	"25": {
 		"title": "Der Kugelfisch im Bauchladen",
-		"address": "Henstedt-Ulzburg Beckersbergstraße 1",
+		"address": "Henstedt-Ulzburg\nBeckersbergstraße 1",
 		"lng": "9.9824637",
 		"lat": "53.7937981"
 	},
 	"26": {
 		"title": "Baby-Shop Grosser",
-		"address": "Reppenstedt Birkenweg 1",
+		"address": "Reppenstedt\nBirkenweg 1",
 		"lng": "10.36251",
 		"lat": "53.24859"
 	},
 	"27": {
 		"title": "Baby Walz Lüneburg",
-		"address": "Lüneburg m Wendischen Dorfe 1",
+		"address": "Lüneburg\nIm Wendischen Dorfe 1",
 		"lng": "10.4123067",
 		"lat": "53.2518488"
 	},
 	"28": {
 		"title": "BabyOne Lüneburg",
-		"address": "Lüneburg Am Schwalbenberg 14",
+		"address": "Lüneburg\nAm Schwalbenberg 14",
 		"lng": "10.42191",
 		"lat": "53.24631"
 	},
 	"29": {
 		"title": "Kiddy-Shop",
-		"address": "Wahlstedt An der Eiche 34",
+		"address": "Wahlstedt\nAn der Eiche 34",
 		"lng": "10.21124",
 		"lat": "53.95258"
 	},
 	"30": {
 		"title": "Schöner Schwanger",
-		"address": "Wesenberg Wohldweg 17",
+		"address": "Wesenberg\nWohldweg 17",
 		"lng": "10.5484",
 		"lat": "53.84207"
 	},
 	"31": {
 		"title": "Alles Für Das Kind",
-		"address": "Bispingen Hauptstraße 2",
+		"address": "Bispingen\nHauptstraße 2",
 		"lng": "9.99717",
 		"lat": "53.08412"
 	},
 	"32": {
 		"title": "Reformhaus Schulze",
-		"address": "Itzehoe Feldschmiede 51",
+		"address": "Itzehoe\nFeldschmiede 51",
 		"lng": "9.51487",
 		"lat": "53.92501"
 	},
 	"33": {
 		"title": "Babyfachmarkt",
-		"address": "Itzehoe Bekstr. 18-22",
+		"address": "Itzehoe\nBekstr. 18-22",
 		"lng": "9.5121124",
 		"lat": "53.934845"
 	},
@@ -246,8 +246,8 @@ exports.de ={
 		"lat": "53.0204667"
 	},
 	"42": {
-		"title": "Wagner&#039;s Spiel+Technik Welt GmbH",
-		"address": "Schwentinental Ot Raisdorf Mergenthalerstr. 1",
+		"title": "Wagner's Spiel+Technik Welt GmbH",
+		"address": "Schwentinental OT Raisdorf Mergenthalerstr. 1",
 		"lng": "10.2547577",
 		"lat": "54.275026"
 	},
@@ -367,13 +367,13 @@ exports.de ={
 	},
 	"62": {
 		"title": "BabyOne Isernhagen",
-		"address": "Isernhagen Opelstraße 26",
+		"address": "Isernhagen\nOpelstraße 26",
 		"lng": "9.83149",
 		"lat": "52.42657"
 	},
 	"63": {
 		"title": "Spiele Max Oldenburg",
-		"address": "Oldenburg (Oldb) Heiligengeisterstr. 5-8",
+		"address": "Oldenburg (Oldb)\nHeiligengeisterstr. 5-8",
 		"lng": "8.2139",
 		"lat": "53.14434"
 	},
@@ -397,13 +397,13 @@ exports.de ={
 	},
 	"67": {
 		"title": "Von Klein auf",
-		"address": "Hannover Edenstr. 42",
+		"address": "Hannover\nEdenstr. 42",
 		"lng": "9.7488309",
 		"lat": "52.3889273"
 	},
 	"68": {
 		"title": "Baby Walz Hannover",
-		"address": "Hannover Georgstr. 8 b",
+		"address": "Hannover\nGeorgstr. 8 b",
 		"lng": "9.7344",
 		"lat": "52.37484"
 	},
@@ -427,7 +427,7 @@ exports.de ={
 	},
 	"72": {
 		"title": "Mama Papa Kind Elternschule",
-		"address": "Hannover Hildesheimer Str. 375",
+		"address": "Hannover\nHildesheimer Str. 375",
 		"lng": "9.777712",
 		"lat": "52.3281301"
 	},
@@ -637,7 +637,7 @@ exports.de ={
 	},
 	"107": {
 		"title": "Levia",
-		"address": "Halle\\/Westfalen Gartenstr. 1",
+		"address": "Halle/Westfalen Gartenstr. 1",
 		"lng": "8.360688",
 		"lat": "52.0602239"
 	},
@@ -793,12 +793,12 @@ exports.de ={
 	},
 	"133": {
 		"title": "Spiele Max Berlin",
-		"address": "Berlin Breite Straße 25-29",
+		"address": "Berlin\nBreite Straße 25-29",
 		"lng": "13.2062111",
 		"lat": "52.5374658"
 	},
 	"134": {
-		"title": "Happy Baby Berlin GmbH",
+		"title": "Happy Baby Berlin\nGmbH",
 		"address": "Berlin-Spandau Gewerbehof 1-7",
 		"lng": "13.21292",
 		"lat": "52.52926"
@@ -811,19 +811,19 @@ exports.de ={
 	},
 	"136": {
 		"title": "BabyOne Spandau",
-		"address": "Berlin Nonnendammallee 117",
+		"address": "Berlin\nNonnendammallee 117",
 		"lng": "13.2611207",
 		"lat": "52.5371579"
 	},
 	"137": {
-		"title": "Spiele Max Potsdam \\/ Drewitz",
-		"address": "Potsdam\\/Drewitz Im Sterncenter 4",
+		"title": "Spiele Max Potsdam / Drewitz",
+		"address": "Potsdam/Drewitz Im Sterncenter 4",
 		"lng": "13.1338041",
 		"lat": "52.3697754"
 	},
 	"138": {
 		"title": "Spiele Max Berlin",
-		"address": "Berlin Wilhelmsdorferstraße 46",
+		"address": "Berlin\nWilhelmsdorferstraße 46",
 		"lng": "13.3015288",
 		"lat": "52.5073952"
 	},
@@ -835,19 +835,19 @@ exports.de ={
 	},
 	"140": {
 		"title": "Raupelinchen",
-		"address": "Berlin Oldenburgerstr. 6",
+		"address": "Berlin\nOldenburgerstr. 6",
 		"lng": "13.3360911",
 		"lat": "52.5282594"
 	},
 	"141": {
 		"title": "Trommler",
-		"address": "Berlin Elberfelder Str.20",
+		"address": "Berlin\nElberfelder Str.20",
 		"lng": "13.33535",
 		"lat": "52.52139"
 	},
 	"142": {
 		"title": "Baby Walz Berlin",
-		"address": "Berlin Knesebeckstr.56\\/58",
+		"address": "Berlin\nKnesebeckstr.56/58",
 		"lng": "13.3207089",
 		"lat": "52.4998816"
 	},
@@ -871,37 +871,37 @@ exports.de ={
 	},
 	"146": {
 		"title": "Spiele Max Berlin",
-		"address": "Berlin Breite Str. 20",
+		"address": "Berlin\nBreite Str. 20",
 		"lng": "13.40491",
 		"lat": "52.57014"
 	},
 	"147": {
-		"title": "Spiele Max Berlin Wedding",
-		"address": "Berlin Badstraße 4",
+		"title": "Spiele Max Berlin\nWedding",
+		"address": "Berlin\nBadstraße 4",
 		"lng": "13.38809",
 		"lat": "52.54909"
 	},
 	"148": {
 		"title": "Pikape&not;&yen;",
-		"address": "Berlin - Pankow M?\\u00bahlenstrasse 42",
+		"address": "Berlin\n- Pankow Mühlenstrasse 42",
 		"lng": "13.4126604",
 		"lat": "52.5720661"
 	},
 	"149": {
 		"title": "Lifelines GbR",
-		"address": "Berlin Niedstr. 22",
+		"address": "Berlin\nNiedstr. 22",
 		"lng": "13.32971",
 		"lat": "52.47249"
 	},
 	"150": {
 		"title": "Spiele Max Berlin",
-		"address": "Berlin Schlossstraße 33-36",
+		"address": "Berlin\nSchlossstraße 33-36",
 		"lng": "13.3211274",
 		"lat": "52.4575951"
 	},
 	"151": {
-		"title": "Globetrotter Berlin Kinderland",
-		"address": "Berlin Schloßstr. 78-82",
+		"title": "Globetrotter Berlin\nKinderland",
+		"address": "Berlin\nSchloßstr. 78-82",
 		"lng": "13.3197407",
 		"lat": "52.4555929"
 	},
@@ -913,19 +913,19 @@ exports.de ={
 	},
 	"153": {
 		"title": "Hit-In.tv",
-		"address": "Berlin Oderberger Str. 34",
+		"address": "Berlin\nOderberger Str. 34",
 		"lng": "13.4052892",
 		"lat": "52.540022"
 	},
 	"154": {
 		"title": "Tina Und Tinchen",
-		"address": "Berlin Schönhauser Allee 129",
+		"address": "Berlin\nSchönhauser Allee 129",
 		"lng": "13.4124797",
 		"lat": "52.5456106"
 	},
 	"155": {
 		"title": "Kinderkaufhaus",
-		"address": "Berlin Torstr. 140",
+		"address": "Berlin\nTorstr. 140",
 		"lng": "13.3989564",
 		"lat": "52.5293615"
 	},
@@ -937,43 +937,43 @@ exports.de ={
 	},
 	"157": {
 		"title": "Lila Lämmchen",
-		"address": "Berlin Dunkerstr. 79",
+		"address": "Berlin\nDunkerstr. 79",
 		"lng": "13.42114",
 		"lat": "52.54334"
 	},
 	"158": {
 		"title": "Woll-Igel Alina Laube GmbH",
-		"address": "Berlin Schönhauser Allee 180",
+		"address": "Berlin\nSchönhauser Allee 180",
 		"lng": "13.4109968",
 		"lat": "52.5307395"
 	},
 	"159": {
 		"title": "Hilly's",
-		"address": "Berlin Kollwitzstr. 39",
+		"address": "Berlin\nKollwitzstr. 39",
 		"lng": "13.4149914",
 		"lat": "52.5342912"
 	},
 	"160": {
 		"title": "Baby-Korb Tillmann Gmbh",
-		"address": "Berlin Bundesallee 17",
+		"address": "Berlin\nBundesallee 17",
 		"lng": "13.404954",
 		"lat": "52.5200066"
 	},
 	"161": {
 		"title": "Rasselfisch GmbH Berlin",
-		"address": "Berlin Rykestr. 44",
+		"address": "Berlin\nRykestr. 44",
 		"lng": "13.42012",
 		"lat": "52.53694"
 	},
 	"162": {
-		"title": "Krabbel-Box\\/Elementelle",
-		"address": "Berlin Knaackstr. 6",
+		"title": "Krabbel-Box/Elementelle",
+		"address": "Berlin\nKnaackstr. 6",
 		"lng": "13.42037",
 		"lat": "52.53409"
 	},
 	"163": {
 		"title": "Wunschkind",
-		"address": "Berlin Prenzlauer Allee 37",
+		"address": "Berlin\nPrenzlauer Allee 37",
 		"lng": "13.42245",
 		"lat": "52.5349"
 	},
@@ -985,19 +985,19 @@ exports.de ={
 	},
 	"165": {
 		"title": "Steckenpferd-Baby",
-		"address": "Berlin Oranienstr. 57",
+		"address": "Berlin\nOranienstr. 57",
 		"lng": "13.41138",
 		"lat": "52.50366"
 	},
 	"166": {
 		"title": "Paul und Paula",
-		"address": "Berlin Richard-Sorge-Str. 25",
+		"address": "Berlin\nRichard-Sorge-Str. 25",
 		"lng": "13.44805",
 		"lat": "52.5208"
 	},
 	"167": {
-		"title": "Baby Walz Berlin 2",
-		"address": "Berlin Landsberger Allee 117",
+		"title": "Baby Walz Berlin\n2",
+		"address": "Berlin\nLandsberger Allee 117",
 		"lng": "13.45583",
 		"lat": "52.52916"
 	},
@@ -1015,19 +1015,19 @@ exports.de ={
 	},
 	"170": {
 		"title": "Spiele Max Berlin",
-		"address": "Berlin Prerower Platz 1",
+		"address": "Berlin\nPrerower Platz 1",
 		"lng": "13.5051",
 		"lat": "52.5634"
 	},
 	"171": {
 		"title": "Spiele Max Berlin",
-		"address": "Berlin Weißenseer Weg\\/Konrad Wolf S",
+		"address": "Berlin\nWeißenseer Weg/Konrad Wolf S",
 		"lng": "13.4887646",
 		"lat": "52.5421623"
 	},
 	"172": {
 		"title": "Spiele Max Berlin",
-		"address": "Berlin Frankfurter Allee 111",
+		"address": "Berlin\nFrankfurter Allee 111",
 		"lng": "13.4745089",
 		"lat": "52.5141263"
 	},
@@ -1044,8 +1044,8 @@ exports.de ={
 		"lat": "51.20941"
 	},
 	"175": {
-		"title": "Spiele Max Berlin Gropius Passagen",
-		"address": "Berlin Johannisthaler Chausee 295-317",
+		"title": "Spiele Max Berlin\nGropius Passagen",
+		"address": "Berlin\nJohannisthaler Chausee 295-317",
 		"lng": "13.4576103",
 		"lat": "52.43005"
 	},
@@ -1063,7 +1063,7 @@ exports.de ={
 	},
 	"178": {
 		"title": "Kinderladen Allerhand",
-		"address": "Berlin Dönhoffstr. 10a",
+		"address": "Berlin\nDönhoffstr. 10a",
 		"lng": "13.5208",
 		"lat": "52.4844"
 	},
@@ -1074,20 +1074,20 @@ exports.de ={
 		"lat": "51.4969802"
 	},
 	"180": {
-		"title": "Spiele Max Halle \\/ Neustadt",
-		"address": "Halle \\/ Neustadt Rennbahnring 9",
+		"title": "Spiele Max Halle / Neustadt",
+		"address": "Halle / Neustadt Rennbahnring 9",
 		"lng": "11.9415096",
 		"lat": "51.4799748"
 	},
 	"181": {
 		"title": "Spiele Max Halle",
-		"address": "Halle\\/ Neustadt Rennbahnring 9",
+		"address": "Halle / Neustadt Rennbahnring 9",
 		"lng": "11.9415096",
 		"lat": "51.4799748"
 	},
 	"182": {
-		"title": "Baby Walz Berlin 3",
-		"address": "Berlin Lil-Dagover-Gasse 1",
+		"title": "Baby Walz Berlin\n3",
+		"address": "Berlin\nLil-Dagover-Gasse 1",
 		"lng": "13.6029474",
 		"lat": "52.5379086"
 	},
@@ -1105,13 +1105,13 @@ exports.de ={
 	},
 	"185": {
 		"title": "Another Kind",
-		"address": "Berlin Myslowitzer Str. 48",
+		"address": "Berlin\nMyslowitzer Str. 48",
 		"lng": "13.59158",
 		"lat": "52.50748"
 	},
 	"186": {
-		"title": "Spiele Max Berlin Köpenick",
-		"address": "Berlin Bahnhofsstraße 33-38",
+		"title": "Spiele Max Berlin\nKöpenick",
+		"address": "Berlin\nBahnhofsstraße 33-38",
 		"lng": "13.5787728",
 		"lat": "52.4579852"
 	},
@@ -1189,7 +1189,7 @@ exports.de ={
 	},
 	"199": {
 		"title": "BabyOne Leipzig",
-		"address": "Leipzig Grosser Marktweg 9",
+		"address": "Leipzig\nGrosser Marktweg 9",
 		"lng": "12.26756",
 		"lat": "51.34496"
 	},
@@ -1207,13 +1207,13 @@ exports.de ={
 	},
 	"202": {
 		"title": "Marialynn",
-		"address": "Leipzig Gohliser Straße 37",
+		"address": "Leipzig\nGohliser Straße 37",
 		"lng": "12.36839",
 		"lat": "51.3578"
 	},
 	"203": {
 		"title": "Spiele Max Leipzig",
-		"address": "Leipzig Ludwigsburger Straße 9",
+		"address": "Leipzig\nLudwigsburger Straße 9",
 		"lng": "12.2904988",
 		"lat": "51.3194946"
 	},
@@ -1243,7 +1243,7 @@ exports.de ={
 	},
 	"208": {
 		"title": "Baby Walz Leipzig",
-		"address": "Leipzig Querstr. 18",
+		"address": "Leipzig\nQuerstr. 18",
 		"lng": "12.3856296",
 		"lat": "51.3410449"
 	},
@@ -1267,13 +1267,13 @@ exports.de ={
 	},
 	"212": {
 		"title": "Lelo Leipzig",
-		"address": "Leipzig Karl-Liebknecht-Straße 123",
+		"address": "Leipzig\nKarl-Liebknecht-Straße 123",
 		"lng": "12.3737019",
 		"lat": "51.3172863"
 	},
 	"213": {
 		"title": "Spiele Max Leipzig",
-		"address": "Leipzig Paunsdorfer-Allee 1",
+		"address": "Leipzig\nPaunsdorfer-Allee 1",
 		"lng": "12.4758",
 		"lat": "51.35122"
 	},
@@ -1483,7 +1483,7 @@ exports.de ={
 	},
 	"248": {
 		"title": "Cindys Babyfachmarkt",
-		"address": "Frankfurt\\/oder Aurorahügel 2",
+		"address": "Frankfurt/Oder Aurorahügel 2",
 		"lng": "14.53956",
 		"lat": "52.33011"
 	},
@@ -1615,7 +1615,7 @@ exports.de ={
 	},
 	"270": {
 		"title": "Schlawindelchen",
-		"address": "Köln Lohsestr. 46 \\/ Ecke Auguststr.",
+		"address": "Köln Lohsestr. 46 / Ecke Auguststr.",
 		"lng": "6.9519367",
 		"lat": "50.9614203"
 	},
@@ -1794,7 +1794,7 @@ exports.de ={
 		"lat": "50.4131"
 	},
 	"300": {
-		"title": "KALEB-Trageladen\\/ Trageberaterin",
+		"title": "KALEB-Trageladen / Trageberaterin",
 		"address": "Dresden Bautzner Str. 50",
 		"lng": "13.7582822",
 		"lat": "51.0633479"
@@ -1891,7 +1891,7 @@ exports.de ={
 	},
 	"316": {
 		"title": "Kinderreich",
-		"address": "Oberursel\\/ts. Untere Hainstraße 14",
+		"address": "Oberursel/Ts. Untere Hainstraße 14",
 		"lng": "8.57931",
 		"lat": "50.203"
 	},
@@ -2065,7 +2065,7 @@ exports.de ={
 	},
 	"345": {
 		"title": "Baby Walz Wiesbaden",
-		"address": "Wiesbaden \\u00c4ppelallee 69",
+		"address": "Wiesbaden Öppelallee 69",
 		"lng": "8.2202094",
 		"lat": "50.0471749"
 	},
@@ -2131,7 +2131,7 @@ exports.de ={
 	},
 	"356": {
 		"title": "Baby Walz Würzburg",
-		"address": "Würzburg Mainaustraße 53",
+		"address": "Würzburg\nMainaustraße 53",
 		"lng": "9.89816",
 		"lat": "49.79688"
 	},
@@ -2149,13 +2149,13 @@ exports.de ={
 	},
 	"359": {
 		"title": "Spiele Max Görlitz",
-		"address": "Görlitz Postplatz 4",
+		"address": "Görlitz\nPostplatz 4",
 		"lng": "14.9878194",
 		"lat": "51.1517954"
 	},
 	"360": {
 		"title": "HOBAUER Spielzeugmarkt",
-		"address": "Forchheim Boschstraße 2",
+		"address": "Forchheim\nBoschstraße 2",
 		"lng": "11.0585655",
 		"lat": "49.7073481"
 	},
@@ -2167,55 +2167,55 @@ exports.de ={
 	},
 	"362": {
 		"title": "Kinder-Center Vetter GmbH",
-		"address": "Bensheim Wormser Str.22",
+		"address": "Bensheim\nWormser Str.22",
 		"lng": "8.61508",
 		"lat": "49.67711"
 	},
 	"363": {
 		"title": "Frische Windel",
-		"address": "Erlangen Obere Karlstraße 12",
+		"address": "Erlangen\nObere Karlstraße 12",
 		"lng": "11.0069277",
 		"lat": "49.6024057"
 	},
 	"364": {
 		"title": "Baur Store",
-		"address": "Prüm Hillstr. 2",
+		"address": "Prüm\nHillstr. 2",
 		"lng": "6.4222516",
 		"lat": "50.2074005"
 	},
 	"365": {
 		"title": "Jako-O GmbH Erlangen",
-		"address": "Erlangen Nürnberger Str. 7",
+		"address": "Erlangen\nNürnberger Str. 7",
 		"lng": "11.00409",
 		"lat": "49.59362"
 	},
 	"366": {
 		"title": "Rabattz Erlebnisfachmarkt Für Sp",
-		"address": "Erlangen Nürnberger Straße 31",
+		"address": "Erlangen\nNürnberger Straße 31",
 		"lng": "11.00476",
 		"lat": "49.59198"
 	},
 	"367": {
 		"title": "Trageladen Mond-B?&sect;r",
-		"address": "Hemsbach K??nigsh?\\u00batterstraße 2",
+		"address": "Hemsbach\nKönigshütterstraße 2",
 		"lng": "8.6468011",
 		"lat": "49.5915703"
 	},
 	"368": {
 		"title": "Happy Baby Bad Mergentheim",
-		"address": "Bad Mergentheim Max-Eyth-Str.14\\/2",
+		"address": "Bad Mergentheim\nMax-Eyth-Str.14/2",
 		"lng": "9.76326",
 		"lat": "49.49502"
 	},
 	"369": {
 		"title": "Kinderausstattung Ittner",
-		"address": "Bad Windsheim Mühlgasse 12",
+		"address": "Bad Windsheim\nMühlgasse 12",
 		"lng": "10.43223",
 		"lat": "49.47935"
 	},
 	"370": {
 		"title": "Kinderwagen Grimm",
-		"address": "Weinheim Grabengasse 7",
+		"address": "Weinheim\nGrabengasse 7",
 		"lng": "8.6719307",
 		"lat": "49.5474382"
 	},
@@ -2227,7 +2227,7 @@ exports.de ={
 	},
 	"372": {
 		"title": "BabyOne Fürth",
-		"address": "Fürth Fritz-Gastreich-Str. 3",
+		"address": "Fürth\nFritz-Gastreich-Str. 3",
 		"lng": "11.0015607",
 		"lat": "49.4954154"
 	},
@@ -2245,79 +2245,79 @@ exports.de ={
 	},
 	"375": {
 		"title": "XXXL Mann Mobilia Mannheim",
-		"address": "Mannheim Spreewaldallee 40",
+		"address": "Mannheim\nSpreewaldallee 40",
 		"lng": "8.5559437",
 		"lat": "49.5171965"
 	},
 	"376": {
 		"title": "Rasselfisch Nürnberg",
-		"address": "Nürnberg Burgschmietstr. 42",
+		"address": "Nürnberg\nBurgschmietstr. 42",
 		"lng": "11.0667532",
 		"lat": "49.4583862"
 	},
 	"377": {
 		"title": "Spiele Max Nürnberg",
-		"address": "Nürnberg Fürther Str. 189",
+		"address": "Nürnberg\nFürther Str. 189",
 		"lng": "11.0474021",
 		"lat": "49.4535029"
 	},
 	"378": {
 		"title": "Baby Walz Nürnberg",
-		"address": "Nürnberg Fürther Straße 189",
+		"address": "Nürnberg\nFürther Straße 189",
 		"lng": "11.0474021",
 		"lat": "49.4535029"
 	},
 	"379": {
 		"title": "Baby Walz Nürnberg",
-		"address": "Nürnberg Vordere Ledergasse 16-20",
+		"address": "Nürnberg\nVordere Ledergasse 16-20",
 		"lng": "11.0708967",
 		"lat": "49.4512538"
 	},
 	"380": {
 		"title": "BabyOne Nürnberg",
-		"address": "Nürnberg Ostendstrasse 115",
+		"address": "Nürnberg\nOstendstrasse 115",
 		"lng": "11.1190378",
 		"lat": "49.4562227"
 	},
 	"381": {
 		"title": "Wellness",
-		"address": "Nürnberg Wodanstr. 48",
+		"address": "Nürnberg\nWodanstr. 48",
 		"lng": "11.0974007",
 		"lat": "49.4375617"
 	},
 	"382": {
 		"title": "Baby Walz Mannheim",
-		"address": "Mannheim D2 5-8",
+		"address": "Mannheim\nD2 5-8",
 		"lng": "8.4651098",
 		"lat": "49.4879923"
 	},
 	"383": {
-		"title": "Der Holzladen \\/ Baby`s Welt",
-		"address": "Weigendorf Unterlangenfeld 1",
+		"title": "Der Holzladen / Baby's Welt",
+		"address": "Weigendorf\nUnterlangenfeld 1",
 		"lng": "11.60874",
 		"lat": "49.50081"
 	},
 	"384": {
 		"title": "W. Reingruber Ohg",
-		"address": "Rothenburg O. D. Tauber Georgenstraße 5-7",
+		"address": "Rothenburg O. D. Tauber\nGeorgenstraße 5-7",
 		"lng": "10.1794196",
 		"lat": "49.377977"
 	},
 	"385": {
 		"title": "Kinderausstattung Rudolph",
-		"address": "Dietenhofen Albrecht-Dürer Str. 21",
+		"address": "Dietenhofe\nAlbrecht-Dürer Str. 21",
 		"lng": "10.6967874",
 		"lat": "49.3992122"
 	},
 	"386": {
 		"title": "XXXLutz",
-		"address": "N?\\u00barnberg Ingolstädter Straße 20",
+		"address": "Nürnberg\nIngolstädter Straße 20",
 		"lng": "11.0904344",
 		"lat": "49.4269378"
 	},
 	"387": {
 		"title": "Baby Walz Ludwigshafen",
-		"address": "Ludwigshafen EKZ Walzmühle\\/ Yorckstr.2",
+		"address": "Ludwigshafen\nEKZ Walzmühle / Yorckstr.2",
 		"lng": "8.45428",
 		"lat": "49.47879"
 	},
@@ -2455,7 +2455,7 @@ exports.de ={
 	},
 	"410": {
 		"title": "XXXLutz",
-		"address": "Wassertr?\\u00badingen Westring 3",
+		"address": "Wassertrüdingen Westring 3",
 		"lng": "10.6245892",
 		"lat": "49.0483522"
 	},
@@ -2599,139 +2599,139 @@ exports.de ={
 	},
 	"434": {
 		"title": "Happy Baby Bad Kötzing",
-		"address": "Bad Kötzing Arnbrucker Straße 17",
+		"address": "Bad Kötzing\nArnbrucker Straße 17",
 		"lng": "12.86801",
 		"lat": "49.16766"
 	},
 	"435": {
 		"title": "Selmair",
-		"address": "Regensburg Donau-Einkaufszentrum",
+		"address": "Regensburg\nDonau-Einkaufszentrum",
 		"lng": "12.1020638",
 		"lat": "48.9882219"
 	},
 	"436": {
 		"title": "Zwergie's",
-		"address": "Schwäbisch Gmünd Ledergasse 16-20",
+		"address": "Schwäbisch Gmünd\nLedergasse 16-20",
 		"lng": "9.7952387",
 		"lat": "48.8011924"
 	},
 	"437": {
 		"title": "Engel Apotheke",
-		"address": "Barbing Bischof-Sailer-Straße 3-7",
+		"address": "Barbing\nBischof-Sailer-Straße 3-7",
 		"lng": "12.1961912",
 		"lat": "49.0030512"
 	},
 	"438": {
 		"title": "XXXL Hiendl",
-		"address": "Regensburg Sulzfeldstraße 1",
+		"address": "Regensburg\nSulzfeldstraße 1",
 		"lng": "12.1671473",
 		"lat": "48.9966449"
 	},
 	"439": {
 		"title": "Baby Walz Schorndorf",
-		"address": "Schorndorf Gmünderstraße 94",
+		"address": "Schorndorf\nGmünderstraße 94",
 		"lng": "9.54251",
 		"lat": "48.80546"
 	},
 	"440": {
 		"title": "BabyOne Waiblingen",
-		"address": "Waiblingen Essener Str. 8",
+		"address": "Waiblingen\nEssener Str. 8",
 		"lng": "9.2973149",
 		"lat": "48.81704"
 	},
 	"441": {
 		"title": "BabyOne Stuttgart-Feuerbach",
-		"address": "Stuttgart-Feuerbach Heilbronner Str. 391",
+		"address": "Stuttgart-Feuerbach\nHeilbronner Str. 391",
 		"lng": "9.17263",
 		"lat": "48.82173"
 	},
 	"442": {
 		"title": "Babywelt Weilimdorf",
-		"address": "Stuttgart-Weilimdorf Glemsgaustrasse 24",
+		"address": "Stuttgart-Weilimdorf\nGlemsgaustrasse 24",
 		"lng": "9.1111",
 		"lat": "48.81594"
 	},
 	"443": {
 		"title": "XXXL Siegle",
-		"address": "Fellbach Robert-Bosch-Straße 11",
+		"address": "Fellbach\nRobert-Bosch-Straße 11",
 		"lng": "9.2877432",
 		"lat": "48.8033928"
 	},
 	"444": {
 		"title": "Heinzelmännchen",
-		"address": "Leonberg Graf-Leutrum-Str. 2\\/4",
+		"address": "Leonberg\nGraf-Leutrum-Str. 2/4",
 		"lng": "9.0184795",
 		"lat": "48.8183604"
 	},
 	"445": {
 		"title": "Pinokids",
-		"address": "Stuttgart Julius-Hölder-Str. 12",
+		"address": "Stuttgart\nJulius-Hölder-Str. 12",
 		"lng": "9.1817588",
 		"lat": "48.7754181"
 	},
 	"446": {
 		"title": "Korbmayer GmbH",
-		"address": "Stuttgart Schulstraße 2",
+		"address": "Stuttgart\nSchulstraße 2",
 		"lng": "9.1778007",
 		"lat": "48.775492"
 	},
 	"447": {
 		"title": "Baby Walz Stuttgart",
-		"address": "Stuttgart Königstr. 43B",
+		"address": "Stuttgart\nKönigstr. 43B",
 		"lng": "9.17477",
 		"lat": "48.77435"
 	},
 	"448": {
 		"title": "Jako-O GmbH Stuttgart",
-		"address": "Stuttgart Hirschstraße 26",
+		"address": "Stuttgart\nHirschstraße 26",
 		"lng": "9.17607",
 		"lat": "48.77426"
 	},
 	"449": {
 		"title": "Rasselfisch",
-		"address": "Stuttgart Vogelsangstraße 42",
+		"address": "Stuttgart\nVogelsangstraße 42",
 		"lng": "9.15307",
 		"lat": "48.77401"
 	},
 	"450": {
 		"title": "BabyOne Leonberg",
-		"address": "Leonberg Riedwiesenstrasse 7",
+		"address": "Leonberg\nRiedwiesenstrasse 7",
 		"lng": "9.02034",
 		"lat": "48.78342"
 	},
 	"451": {
 		"title": "Herzallerliebst Hebammenpraxis",
-		"address": "Esslingen Webergasse 12",
+		"address": "Esslingen\nWebergasse 12",
 		"lng": "9.3097854",
 		"lat": "48.7427056"
 	},
 	"452": {
 		"title": "Hebammenladen Herzallerliebst",
-		"address": "Esslingen Webergasse 12",
+		"address": "Esslingen\nWebergasse 12",
 		"lng": "9.3097854",
 		"lat": "48.7427056"
 	},
 	"453": {
 		"title": "Astrid Scheidel",
-		"address": "Stuttgart Wörthstraße 11",
+		"address": "Stuttgart\nWörthstraße 11",
 		"lng": "9.1234112",
 		"lat": "48.7296483"
 	},
 	"454": {
 		"title": "Baby Walz Göppingen",
-		"address": "Göppingen Mörikestraße 2-4",
+		"address": "Göppingen\nMörikestraße 2-4",
 		"lng": "9.6582301",
 		"lat": "48.7010665"
 	},
 	"455": {
 		"title": "BabyOne Göppingen",
-		"address": "Göppingen Am Autohof 43",
+		"address": "Göppingen\nAm Autohof 43",
 		"lng": "9.68204",
 		"lat": "48.69832"
 	},
 	"456": {
 		"title": "Spiele Max Ingolstadt",
-		"address": "Ingolstadt Ludwigstraße 25",
+		"address": "Ingolstadt\nLudwigstraße 25",
 		"lng": "11.4268",
 		"lat": "48.76474"
 	},
@@ -2791,7 +2791,7 @@ exports.de ={
 	},
 	"466": {
 		"title": "Baby-Spielwaren Schad",
-		"address": "Kirchheim\\/ Teck Alleenstr. 4",
+		"address": "Kirchheim/ Teck Alleenstr. 4",
 		"lng": "9.4491196",
 		"lat": "48.6485887"
 	},
@@ -2809,7 +2809,7 @@ exports.de ={
 	},
 	"469": {
 		"title": "Happy Baby Lichtenau",
-		"address": "Lichtenau\\/baden Hauptstr. 70 a",
+		"address": "Lichtenau/Baden Hauptstr. 70 a",
 		"lng": "8.0080749",
 		"lat": "48.712654"
 	},
@@ -2959,19 +2959,19 @@ exports.de ={
 	},
 	"494": {
 		"title": "Westkreuzapotheke",
-		"address": "München Radolfzeller Straße 13",
+		"address": "München\nRadolfzeller Straße 13",
 		"lng": "11.4370982",
 		"lat": "48.1461738"
 	},
 	"495": {
 		"title": "Das Kinderzimmer",
-		"address": "München Kurfürstenstraße 55",
+		"address": "München\nKurfürstenstraße 55",
 		"lng": "11.5753245",
 		"lat": "48.1585818"
 	},
 	"496": {
 		"title": "Kinder Ambiente",
-		"address": "München Schleißheimer Str. 73",
+		"address": "München\nSchleißheimer Str. 73",
 		"lng": "11.5619421",
 		"lat": "48.1566846"
 	},
@@ -2983,31 +2983,31 @@ exports.de ={
 	},
 	"498": {
 		"title": "Blickfang Baby- Und Kindermode",
-		"address": "München Nymphenburger Straße 25",
+		"address": "München\nNymphenburger Straße 25",
 		"lng": "11.55366",
 		"lat": "48.14792"
 	},
 	"499": {
 		"title": "XXXLutz",
-		"address": "Aschheim Eichendorfstraße 40",
+		"address": "Aschheim\nEichendorfstraße 40",
 		"lng": "11.7398938",
 		"lat": "48.1642394"
 	},
 	"500": {
 		"title": "Sanitätshaus Gottinger",
-		"address": "Poing Alte Gruber Straße 1",
+		"address": "Poing\nAlte Gruber Straße 1",
 		"lng": "11.8064153",
 		"lat": "48.1716114"
 	},
 	"501": {
 		"title": "XXXLutz",
-		"address": "Müchen Theresienh??he 5",
+		"address": "München\nTheresienhöhe 5",
 		"lng": "11.5382059",
 		"lat": "48.1359616"
 	},
 	"502": {
 		"title": "Walter Schlichting GmbH & Co.KG",
-		"address": "München Maximilianstr. 35",
+		"address": "München\nMaximilianstr. 35",
 		"lng": "11.5841072",
 		"lat": "48.1383315"
 	},
@@ -3025,97 +3025,97 @@ exports.de ={
 	},
 	"505": {
 		"title": "Globetrotter München",
-		"address": "München Isartorplatz 8 - 10",
+		"address": "München\nIsartorplatz 8 - 10",
 		"lng": "11.5819256",
 		"lat": "48.1344114"
 	},
 	"506": {
 		"title": "Baby Ansorge",
-		"address": "München Lindwurmstr. 17",
+		"address": "München\nLindwurmstr. 17",
 		"lng": "11.5640586",
 		"lat": "48.1319575"
 	},
 	"507": {
 		"title": "Auryn Naturfashion",
-		"address": "München Reichenbachstr. 35",
+		"address": "München\nReichenbachstr. 35",
 		"lng": "11.5760228",
 		"lat": "48.1300076"
 	},
 	"508": {
 		"title": "Windelservice München",
-		"address": "München Plinganserstr. 6",
+		"address": "München\nPlinganserstr. 6",
 		"lng": "11.54089",
 		"lat": "48.12179"
 	},
 	"509": {
 		"title": "Rasselfisch München",
-		"address": "München Auerfeldstraße 22",
+		"address": "München\nAuerfeldstraße 22",
 		"lng": "11.5961366",
 		"lat": "48.1235227"
 	},
 	"510": {
 		"title": "Raumausstattung und Babyhaus Schuler",
-		"address": "St. Georgen Gerwigstr. 16",
+		"address": "St. Georgen\nGerwigstr. 16",
 		"lng": "8.3358271",
 		"lat": "48.1258025"
 	},
 	"511": {
 		"title": "Kinnings Babythings",
-		"address": "München Ottobrunner Straße 6",
+		"address": "München\nOttobrunner Straße 6",
 		"lng": "11.61688",
 		"lat": "48.11231"
 	},
 	"512": {
 		"title": "Baby Walz Haar",
-		"address": "Haar bei München Keferloher Str. 24",
+		"address": "Haar bei München\nKeferloher Str. 24",
 		"lng": "11.7149389",
 		"lat": "48.1118522"
 	},
 	"513": {
 		"title": "Baby Nest",
-		"address": "Memmingen Fraunhoferstr. 5",
+		"address": "Memmingen\nFraunhoferstr. 5",
 		"lng": "10.16948",
 		"lat": "48.00317"
 	},
 	"514": {
 		"title": "Spiel&Baby Paradies Tauscher&Soh",
-		"address": "Landsberg Am Lech Dr.-Hermann-Köhl-Str. 4",
+		"address": "Landsberg Am Lech\nDr.-Hermann-Köhl-Str. 4",
 		"lng": "10.8506608",
 		"lat": "48.025303"
 	},
 	"515": {
 		"title": "Strohm Babyausstattung & Raumges",
-		"address": "Villingen-Schwenningen Oberdorfstr. 1",
+		"address": "Villingen-Schwenningen\nOberdorfstr. 1",
 		"lng": "8.5329179",
 		"lat": "48.0630293"
 	},
 	"516": {
 		"title": "BabyOne Villingen",
-		"address": "Villingen Am Krebsgraben 2-3",
+		"address": "Villingen\nAm Krebsgraben 2-3",
 		"lng": "8.45179",
 		"lat": "48.06808"
 	},
 	"517": {
 		"title": "XXXL Hiendl",
-		"address": "Neuötting August-Unterholzner-Straße 18",
+		"address": "Neuötting\nAugust-Unterholzner-Straße 18",
 		"lng": "12.6895533",
 		"lat": "48.2412905"
 	},
 	"518": {
 		"title": "TUTTI BABY Babyland GmbH",
-		"address": "Unterhaching Franz-Schubert-Str. 7",
+		"address": "Unterhaching\nFranz-Schubert-Str. 7",
 		"lng": "11.6100397",
 		"lat": "48.0689918"
 	},
 	"519": {
 		"title": "BabyOne Brunnthal",
-		"address": "Brunnthal Zusestraße 1",
+		"address": "Brunnthal\nZusestraße 1",
 		"lng": "11.6612628",
 		"lat": "48.0411065"
 	},
 	"520": {
 		"title": "Baby Walz",
-		"address": "Bad Waldsee Steinstraße 28",
+		"address": "Bad Waldsee\nSteinstraße 28",
 		"lng": "9.7532823",
 		"lat": "47.9226998"
 	},
@@ -3127,37 +3127,37 @@ exports.de ={
 	},
 	"522": {
 		"title": "Holzinnsel",
-		"address": "Wasserburg Am Inn Salzsenderzeile 8",
+		"address": "Wasserburg\nAm Inn Salzsenderzeile 8",
 		"lng": "12.2332455",
 		"lat": "48.0615166"
 	},
 	"523": {
 		"title": "Babyland-Online",
-		"address": "Gundelfingen Industriestraße 5",
+		"address": "Gundelfingen\nIndustriestraße 5",
 		"lng": "7.86249",
 		"lat": "48.03721"
 	},
 	"524": {
 		"title": "BabyOne Gundelfingen",
-		"address": "Gundelfingen Bundesstrasse 1",
+		"address": "Gundelfingen\nBundesstrasse 1",
 		"lng": "7.86376",
 		"lat": "48.03651"
 	},
 	"525": {
 		"title": "Haus Des Kindes Kaufbeuren",
-		"address": "Kaufbeuren Ludwigstraße 4",
+		"address": "Kaufbeuren\nLudwigstraße 4",
 		"lng": "10.6224892",
 		"lat": "47.8791533"
 	},
 	"526": {
 		"title": "XXXLutz Freiburg",
-		"address": "Freiburg Herrmann-Mitsch-Straße 15",
+		"address": "Freiburg\nHerrmann-Mitsch-Straße 15",
 		"lng": "7.83862",
 		"lat": "48.01942"
 	},
 	"527": {
 		"title": "Gute Kinderstube",
-		"address": "Freiburg Engelbergstraße 23",
+		"address": "Freiburg\nEngelbergstraße 23",
 		"lng": "7.8361556",
 		"lat": "47.9964748"
 	},
@@ -3169,7 +3169,7 @@ exports.de ={
 	},
 	"529": {
 		"title": "Jako-O GmbH Freiburg",
-		"address": "Freiburg Schwarzwaldstr. 78",
+		"address": "Freiburg\nSchwarzwaldstr. 78",
 		"lng": "7.87113",
 		"lat": "47.98806"
 	},
@@ -3181,19 +3181,19 @@ exports.de ={
 	},
 	"531": {
 		"title": "Wiki-Naturwaren Christian Rieger",
-		"address": "Freiburg Hugstmattweg 14",
+		"address": "Freiburg\nHugstmattweg 14",
 		"lng": "7.7167566",
 		"lat": "47.99639"
 	},
 	"532": {
 		"title": "Babyparadies",
-		"address": "Geretsried Jeschkenstraße 13",
+		"address": "Geretsried\nJeschkenstraße 13",
 		"lng": "11.4917083",
 		"lat": "47.8503134"
 	},
 	"533": {
 		"title": "Baby-Paradies-Kempten",
-		"address": "Kempten Auf Dem Bühl 93",
+		"address": "Kempten\nAuf Dem Bühl 93",
 		"lng": "10.33237",
 		"lat": "47.73612"
 	},
@@ -3210,56 +3210,56 @@ exports.de ={
 		"lat": "47.7069304"
 	},
 	"536": {
-		"title": "Kindershop &quot;Flohkiste&quot;",
-		"address": "Rosenheim Reichenbachstraße 14",
+		"title": "Kindershop „Flohkiste“",
+		"address": "Rosenheim\nReichenbachstraße 14",
 		"lng": "12.12686",
 		"lat": "47.85159"
 	},
 	"537": {
 		"title": "Rappelkiste GmbH und CoKG",
-		"address": "Rielasingen-Worblingen Werner-Von-Siemens-Str. 4",
+		"address": "Rielasingen-Worblingen\nWerner-Von-Siemens-Str. 4",
 		"lng": "8.8479429",
 		"lat": "47.7365026"
 	},
 	"538": {
 		"title": "Bauch & Bäuchlein",
-		"address": "Wangen Im Allgäu Gegenbaurstr. 29",
+		"address": "Wangen\nIm Allgäu Gegenbaurstr. 29",
 		"lng": "9.83323",
 		"lat": "47.68815"
 	},
 	"539": {
 		"title": "XXXL Friedrichshafen",
-		"address": "Friedrichshafen Ailinger Straße 111",
+		"address": "Friedrichshafen\nAilinger Straße 111",
 		"lng": "9.48626",
 		"lat": "47.66656"
 	},
 	"540": {
 		"title": "Babyland Konstanz",
-		"address": "Konstanz Max-Stromayer-Straße 57",
+		"address": "Konstanz\nMax-Stromayer-Straße 57",
 		"lng": "9.14788",
 		"lat": "47.67987"
 	},
 	"541": {
 		"title": "Baby Walz Konstanz",
-		"address": "Konstanz Macairestr.17",
+		"address": "Konstanz\nMacairestr.17",
 		"lng": "9.14658",
 		"lat": "47.6786"
 	},
 	"542": {
 		"title": "Zappelfloh",
-		"address": "Konstanz Max Stromeyer-Straße 13 a",
+		"address": "Konstanz\nMax Stromeyer-Straße 13 a",
 		"lng": "9.16693",
 		"lat": "47.6739"
 	},
 	"543": {
 		"title": "Bübchen+Mädchen",
-		"address": "Konstanz Reichenaustr. 34",
+		"address": "Konstanz\nReichenaustr. 34",
 		"lng": "9.1704",
 		"lat": "47.67152"
 	},
 	"544": {
 		"title": "Purzelbaum Kindermode",
-		"address": "Gmund Müchner Straße 134",
+		"address": "Gmund\nMüchner Straße 134",
 		"lng": "11.7349585",
 		"lat": "47.7507179"
 	},
@@ -3301,13 +3301,13 @@ exports.de ={
 	},
 	"551": {
 		"title": "BabyOne Binzen",
-		"address": "Binzen Am Dreispitz 4",
+		"address": "Binzen\nAm Dreispitz 4",
 		"lng": "7.61042",
 		"lat": "47.62592"
 	},
 	"552": {
 		"title": "Baby Walz Weil am Rhein",
-		"address": "Weil am Rhein Hauptstr. 333-339",
+		"address": "Weil am Rhein\nHauptstr. 333-339",
 		"lng": "7.60986",
 		"lat": "47.59229"
 	}

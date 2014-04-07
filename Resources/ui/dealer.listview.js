@@ -14,8 +14,9 @@ exports.create = function(pois) {
 		for (var i = 0; i < pois.length; i++) {
 			rows.push({
 				properties : {
-					accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_NONE,
-					backgroundColor : 'white'
+					accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE,
+					backgroundColor : 'white',
+					itemId : JSON.stringify(pois[i])
 				},
 				title : {
 					text : pois[i].title
@@ -24,13 +25,16 @@ exports.create = function(pois) {
 					text : pois[i].address
 				},
 				dist : {
-					text : (pois[i].dist/1000).toFixed(1) + 'km'
+					text : (pois[i].dist / 1000).toFixed(1) + 'km'
 				}
 			});
-		}		
+		}
 		self.sections[0].setItems(rows);
 		self.setSections(self.sections);
-	}, 200);
+	}, 20);
+	self.addEventListener('itemclick',function(_e){
+		require('ui/dealer.window').create(JSON.parse(_e.itemId)).open();
+	});
 	return self;
 
-}; 
+};

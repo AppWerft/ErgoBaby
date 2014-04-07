@@ -35,7 +35,7 @@ exports.create = function(pois) {
 			}));**/
 		}
 		self.addAnnotations(annotations1);
-		self.selectAnnotation(annotations1[0]);
+		
 		setTimeout(function() {
 			for (var i = 100; i < pois.length; i++) {
 				annotations2.push(Ti.Map.createAnnotation({
@@ -47,6 +47,7 @@ exports.create = function(pois) {
 				}));
 			}
 			self.addAnnotations(annotations2);
+			self.selectAnnotation(annotations1[0]);
 		}, 500);
 	});
 

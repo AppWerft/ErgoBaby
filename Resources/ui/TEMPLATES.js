@@ -1,6 +1,6 @@
 exports.babydealer = {
 	properties : {
-		height : '100dp',
+		height : Ti.UI.SIZE,
 	},
 	childTemplates : [{
 		type : 'Ti.UI.ImageView',
@@ -9,7 +9,7 @@ exports.babydealer = {
 			width : '60dp',
 			image : '/appicon.png',
 			left : 0,
-			top : 0
+			top : '5dp'
 		}
 	}, {
 		type : 'Ti.UI.View',
@@ -17,15 +17,17 @@ exports.babydealer = {
 			height : Ti.UI.SIZE,
 			width : Ti.UI.FILL,
 			left : '70dp',
-			top : 0,layout:'vertical'
+			right : '15dp',
+			top : 0,
+			layout : 'vertical'
 		},
 		childTemplates : [{
 			type : 'Ti.UI.Label',
 			bindId : 'title',
 			properties : {
-				color : 'orange',
+				color : '#333',
 				width : Ti.UI.FILL,
-				height : '45dip',
+				height : Ti.UI.SIZE,
 				font : {
 					fontSize : '19dp',
 					fontWeight : 'bold'
@@ -43,23 +45,22 @@ exports.babydealer = {
 					fontSize : '14dp'
 
 				},
+				height : Ti.UI.SIZE,
 				left : 0,
-				top :  '5dp'
+				top : '1dp'
 			}
 		}, {
 			type : 'Ti.UI.Label',
 			bindId : 'dist',
-			text : 'Distance',
 			properties : {
 				color : '#333',
-				width : Ti.UI.SIZE,
+				width : Ti.UI.FILL,
 				height : Ti.UI.SIZE,
 				font : {
 					fontSize : '12dp',
-
 				},
-				right : '10dip',
-				bottom : '2dp'
+				right : 0,
+				top : '5dp'
 			}
 		}]
 	}]
