@@ -65,7 +65,6 @@ exports.create = function() {
 	var pins = [];
 	var self = Ti.UI.createWindow({
 		fullscreen : true
-
 	});
 	self.container = Ti.UI.createScrollView({
 		scrollType : 'vertical',

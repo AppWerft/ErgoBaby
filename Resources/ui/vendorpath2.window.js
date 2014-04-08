@@ -104,21 +104,7 @@ exports.create = function(_args) {
 				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
 				icon : '/assets/sv.png'
 			}).addEventListener("click", function() {
-				var win = require('vendor/window').create({
-					title : _args.title
-				});
-				var web = Ti.UI.createWebView({
-					url : 'streetview/index.html',
-					enableZoomControls : false,
-					scalesPageToFit : true,
-					cacheMode : Ti.UI.Android.WEBVIEW_LOAD_NO_CACHE
-
-				});
-				web.addEventListener('load', function() {
-					web.evalJS('initSV({lat:' + _args.lat + ',lng:' + _args.lng + '})');
-				});
-				win.add(web);
-				win.open();
+				require('ui/streetview/window').create(_args).open();
 			});
 			var menuitems = ['Driving', 'Bicycling', 'Walking'];
 			for (var i = 0; i < menuitems.length; i++)

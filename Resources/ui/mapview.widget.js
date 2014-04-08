@@ -13,6 +13,7 @@ exports.create = function(pois, RATIO) {
 		},
 		animate : false,
 		height : RATIO,
+		backgroundColor : 'orange',
 		userLocation : true
 	});
 	Ti.UI.createNotification({
@@ -26,7 +27,7 @@ exports.create = function(pois, RATIO) {
 				longitude : p.lng,
 				title : p.title,
 				image : '/assets/appicon.png',
-				subtitle : p.address.replace(/\n/g,' '),
+				subtitle : p.address.replace(/\n/g, ' '),
 				itemId : JSON.stringify(p)
 			}));
 		}
@@ -39,7 +40,7 @@ exports.create = function(pois, RATIO) {
 					longitude : p.lng,
 					title : p.title,
 					image : '/assets/appicon.png',
-					subtitle : p.address.replace(/\n/g,' '),
+					subtitle : p.address.replace(/\n/g, ' '),
 					itemId : JSON.stringify(p)
 				}));
 			}

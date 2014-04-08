@@ -15,8 +15,10 @@ exports.create = function() {
 	console.log('Info: listview_widget created');
 	self.addEventListener('open', function() {
 		console.log('Info: mapwindow opened, try to add mapview to window');
-		self.container.add(self.mapview);
-		self.container.add(self.listview);
+		if (self.mapview)
+			self.container.add(self.mapview);
+		console.log('Info: mapwindow opened, try to add listview to window');
+		if (self.listview)self.container.add(self.listview);
 	});
 	self.container.add(require('ui/viewslider.widget').create(RATIO, {
 		onmove : function(RATIO) {
