@@ -7,38 +7,36 @@
 		<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="map-canvas">Placeholder for awesome streetview</div>
+		<div id="map-canvas">
+			Placeholder for awesome streetview
+		</div>
 		<script type="text/javascript">
-			! function() {
-				var map, panorama, streetviewservice;
-				function createPanorama(posi) {
-					streetviewservice.getPanoramaByLocation(new google.maps.LatLng(posi.lat, posi.lng), 150, function(data, status) {
-						if (status == google.maps.StreetViewStatus.OK) {
-							panorama.setVisible(true);
-							panorama.setPano(data.location.pano);
-							panorama.setPov({
-								heading : 10,
-								pitch : 0,
-								zoom : 1.6
-							});
-							panorama.setVisible(true);
-							var height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
-							document.getElementById("map-canvas").style.height = height + 'px';
-							panorama.setHeight(height + 'px');
-						}
-					});
-				}
-
-
-				google.maps.event.addDomListener(window, 'load', function() {
-					streetviewservice = new google.maps.StreetViewService();
-					panorama = new google.maps.StreetViewPanorama(document.getElementById("map-canvas"), {
-						navigationControl : false,
-						linksControl : false,
-						enableCloseButton : false,
-					});
+			var map, panorama, streetviewservice;
+			function createPanorama(posi) {
+				streetviewservice.getPanoramaByLocation(new google.maps.LatLng(posi.lat, posi.lng), 150, function(data, status) {
+					if (status == google.maps.StreetViewStatus.OK) {
+						panorama.setVisible(true);
+						panorama.setPano(data.location.pano);
+						panorama.setPov({
+							heading : 10,
+							pitch : 0,
+							zoom : 1.6
+						});
+						panorama.setVisible(true);
+						var height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
+						document.getElementById("map-canvas").style.height = height + 'px';
+						panorama.setHeight(height + 'px');
+					}
 				});
-			}();
+			}
+			google.maps.event.addDomListener(window, 'load', function() {
+				streetviewservice = new google.maps.StreetViewService();
+				panorama = new google.maps.StreetViewPanorama(document.getElementById("map-canvas"), {
+					navigationControl : false,
+					linksControl : false,
+					enableCloseButton : false,
+				});
+			});
 		</script>
 	</body>
 </html>
