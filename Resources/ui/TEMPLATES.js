@@ -1,6 +1,7 @@
 exports.babydealer = {
 	properties : {
-		height : Ti.UI.SIZE
+		height : Ti.UI.SIZE,
+		backgroundColor : 'white'
 	},
 	childTemplates : [{
 		type : 'Ti.UI.ImageView',
@@ -25,7 +26,7 @@ exports.babydealer = {
 			type : 'Ti.UI.Label',
 			bindId : 'title',
 			properties : {
-				color : '#ccc',
+				color : '#444',
 				width : Ti.UI.FILL,
 				height : Ti.UI.SIZE,
 				font : {
@@ -39,7 +40,7 @@ exports.babydealer = {
 			type : 'Ti.UI.Label',
 			bindId : 'address',
 			properties : {
-				color : '#fff',
+				color : '#333',
 				text : 'Address',
 				font : {
 					fontSize : '14dp'
@@ -165,7 +166,6 @@ exports.items = {
 	}]
 };
 
-
 exports.steps = {
 	properties : {
 		height : Ti.UI.SIZE,
@@ -175,7 +175,7 @@ exports.steps = {
 		type : 'Ti.UI.Label',
 		bindId : 'title',
 		properties : {
-			color : 'orange',
+			color : '#333',
 			width : Ti.UI.FILL,
 			height : '45dip',
 			font : {

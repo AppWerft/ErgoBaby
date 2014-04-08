@@ -41,7 +41,8 @@ exports.create = function(_args) {
 		}),
 		userLocationButton : false,
 		animate : true,
-		height : '80%',top:0,
+		height : '80%',
+		top : 0,
 		userLocation : true
 	});
 	self.mapview.addEventListener('complete', function() {
@@ -86,6 +87,7 @@ exports.create = function(_args) {
 					title : name,
 					showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER,
 					checkable : true,
+					icon : '/assets/sv.png',
 					checked : (i) ? false : true,
 					visible : true
 				}).addEventListener("click", function() {
@@ -97,6 +99,27 @@ exports.create = function(_args) {
 					addRoute2Map(name.toLowerCase());
 				});
 			};
+			e.menu.add({
+				title : 'StreetView',
+				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
+				icon : '/assets/sv.png'
+			}).addEventListener("click", function() {
+				var win = require('vendor/window').create({
+					title : _args.title
+				});
+				var web = Ti.UI.createWebView({
+					url : 'streetview/index.html',
+					enableZoomControls : false,
+					scalesPageToFit : true,
+					cacheMode : Ti.UI.Android.WEBVIEW_LOAD_NO_CACHE
+
+				});
+				web.addEventListener('load', function() {
+					web.evalJS('initSV({lat:' + _args.lat + ',lng:' + _args.lng + '})');
+				});
+				win.add(web);
+				win.open();
+			});
 			var menuitems = ['Driving', 'Bicycling', 'Walking'];
 			for (var i = 0; i < menuitems.length; i++)
 				addMenu(i, menuitems[i]);

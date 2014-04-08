@@ -15,7 +15,7 @@ exports.create = function(pois, RATIO) {
 			rows.push({
 				properties : {
 					accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE,
-					backgroundColor : 'black',
+					backgroundColor : 'white',
 					itemId : JSON.stringify(pois[i])
 				},
 				title : {
