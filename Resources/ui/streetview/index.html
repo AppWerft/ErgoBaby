@@ -5,32 +5,14 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
 		<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
-		<style>
-			html, body, #map-canvas {
-				height: 100%;
-				margin: 0px;
-				padding: 0px
-			}
-
-		</style>
 	</head>
 	<body>
-		<div id="map-canvas">
-
-		</div>
+		<div id="map-canvas"></div>
 		<script type="text/javascript">
-			var map,panorama,sv;
-			function initialize() {
-				sv = new google.maps.StreetViewService();
-				panorama = new google.maps.StreetViewPanorama(document.getElementById("map-canvas"), {
-					navigationControl : false,
-					linksControl : false,
-					enableCloseButton : false,
-				});
-			}
+			var map, panorama, streetviewservice;
 
-			function initSV(posi) {
-				sv.getPanoramaByLocation(new google.maps.LatLng(posi.lat, posi.lng), 150, function(data, status) {
+			function createPanorama(posi) {
+				streetviewservice.getPanoramaByLocation(new google.maps.LatLng(posi.lat, posi.lng), 150, function(data, status) {
 					if (status == google.maps.StreetViewStatus.OK) {
 						panorama.setVisible(true);
 						panorama.setPano(data.location.pano);
@@ -46,11 +28,14 @@
 					}
 				});
 			}
-			google.maps.event.addDomListener(window, 'load', initialize);
-			/*initSV({
-			 lat : 53.5503029,
-			 lng : 9.997708
-			 });*/
+			google.maps.event.addDomListener(window, 'load', function() {
+				streetviewservice = new google.maps.StreetViewService();
+				panorama = new google.maps.StreetViewPanorama(document.getElementById("map-canvas"), {
+					navigationControl : false,
+					linksControl : false,
+					enableCloseButton : false,
+				});
+			});
 		</script>
 	</body>
 </html>

@@ -10,7 +10,7 @@ exports.create = function(_args) {
 
 	});
 	web.addEventListener('load', function() {
-		web.evalJS('initSV({lat:' + _args.lat + ',lng:' + _args.lng + '})');
+		web.evalJS('createPanorama({lat:' + _args.lat + ',lng:' + _args.lng + '})');
 	});
 	self.add(web);
 	return self;

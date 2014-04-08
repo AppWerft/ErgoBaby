@@ -32,7 +32,7 @@ exports.create = function(pois, RATIO) {
 			}));
 		}
 		self.addAnnotations(annotations1);
-		setTimeout(function() {
+		/*setTimeout(function() {
 			for (var i = 100; i < pois.length; i++) {
 				var p = pois[i];
 				annotations2.push(Ti.Map.createAnnotation({
@@ -47,6 +47,7 @@ exports.create = function(pois, RATIO) {
 			self.addAnnotations(annotations2);
 			self.selectAnnotation(annotations1[0]);
 		}, 2000);
+		*/
 	});
 	self.addEventListener('click', function(_e) {
 		if (_e.annotation && (_e.clicksource != 'pin')) {

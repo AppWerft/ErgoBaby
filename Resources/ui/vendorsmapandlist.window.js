@@ -18,7 +18,8 @@ exports.create = function() {
 		if (self.mapview)
 			self.container.add(self.mapview);
 		console.log('Info: mapwindow opened, try to add listview to window');
-		if (self.listview)self.container.add(self.listview);
+		if (self.listview)
+			self.container.add(self.listview);
 	});
 	self.container.add(require('ui/viewslider.widget').create(RATIO, {
 		onmove : function(RATIO) {
