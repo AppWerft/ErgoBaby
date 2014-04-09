@@ -2,7 +2,8 @@ exports.create = function() {
 
 	var self = Ti.UI.createView({
 		bottom : '-60dp',
-		height : '60dp',bubbleParent:false
+		height : '60dp',
+		bubbleParent : false
 	});
 	self.add(Ti.UI.createView({
 		backgroundColor : 'black',
@@ -18,7 +19,12 @@ exports.create = function() {
 		zIndex : 9999
 	});
 	priceslider.addEventListener('change', function(_e) {
-		price.setText(parseInt(_e.value)+ ',– €');
+		price.setText(parseInt(_e.value) + ',– €');
+	});
+	priceslider.addEventListener('stop', function(_e) {
+		self.fireEvent('changed', {
+			maxprice : _e.value
+		});
 	});
 	var pricelabel = Ti.UI.createView({
 		backgroundImage : '/assets/price.png',
@@ -48,5 +54,5 @@ exports.create = function() {
 	self.add(priceslider);
 
 	return self;
-	
+
 };

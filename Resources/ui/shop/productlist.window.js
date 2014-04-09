@@ -5,48 +5,91 @@ exports.create = function(title) {
 		title : 'ErgoBaby'
 	});
 	self.filtervisible = false;
+	self.showFilter = function() {
+		colorfilter.animate({
+			top : 0
+		});
+		self.listview.animate({
+			top : '40dp'
+		});
+		pricefilter.animate({
+			bottom : 0
+		});
+		self.filtervisible = true;
+	};
+	self.hideFilter = function() {
+		if (self.filtervisible) {
+			colorfilter.animate({
+				top : '-60dp'
+			});
+			pricefilter.animate({
+				bottom : '-60dp'
+			});
+			self.listview.animate({
+				top : 0,
+				bottom : 0
+			});
+			self.filtervisible = false;
+		}
+	};
+
 	var colorfilter = require('ui/shop/colorfilter.widget').create();
 	var pricefilter = require('ui/shop/pricefilter.widget').create();
-	var cats = require('model/shop');
+
 	self.listview = Ti.UI.createListView({
 		sections : [Ti.UI.createListSection({
 			headerTitle : null,
-
 		})],
 		top : 0,
+		bottom : 0,
 		templates : {
 			'template' : require('ui/TEMPLATES').items
 		},
 		defaultItemTemplate : 'template'
 	});
 	self.add(self.listview);
-	var rows = [];
-	for (var i = 0; i < cats.length; i++) {
-		if (cats[i].items) {
-			for (var j = 0; j < cats[i].items.length; j++) {
-				if (cats[i].items.title)
-					rows.push({
-						properties : {
-							accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE,
-							itemId : cats[i].items[j].title
-						},
-						title : {
-							text : cats[i].items[j].title
-						},
-						color : {
-							text : 'Color: ' + cats[i].items[j].color || 'unknown'
-						},
-						price : {
-							text : 'Price: ' + parseFloat(cats[i].items[j].price).toFixed(2) + ' €'
-						},
-						image : {
-							image : cats[i].items[j].image
-						}
-					});
+	var itemdata = [];
+	var cats = require('model/shop');
+	self.listview.updateList = function(_args) {
+		console.log(_args);
+		itemdata = [];
+		var maxprice = _args.maxprice || 999;
+		console.log(maxprice);
+		for (var i = 0; i < cats.length; i++) {
+			if (cats[i].items) {
+				for (var j = 0; j < cats[i].items.length; j++) {
+					if (cats[i].items[j].title && cats[i].items[j].title.price < maxprice)
+						itemdata.push({
+							properties : {
+								accessoryType : Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE,
+								itemId : cats[i].items[j].title
+							},
+							title : {
+								text : cats[i].items[j].title
+							},
+							color : {
+								text : 'Color: ' + cats[i].items[j].color || 'unknown'
+							},
+							price : {
+								text : 'Price: ' + parseFloat(cats[i].items[j].price).toFixed(2) + ' €'
+							},
+							image : {
+								image : cats[i].items[j].image
+							}
+						});
+				}
 			}
 		}
-	}
-	self.listview.getSections()[0].setItems(rows);
+		self.listview.getSections()[0].setItems(itemdata);
+	};
+	self.listview.updateList({
+		maxprice : 999
+	})
+	pricefilter.addEventListener('changed', function(_data) {
+		self.listview.updateList({
+			maxprice : _data.maxprice
+		});
+	});
 	self.add(colorfilter);
 	self.add(pricefilter);
 	self.addEventListener('open', function() {
@@ -74,53 +117,11 @@ exports.create = function(title) {
 				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
 				icon : '/assets/filter.png'
 			}).addEventListener("click", function() {
-				if (self.filtervisible) {
-					colorfilter.animate({
-						top : '-60dp'
-					});
-					pricefilter.animate({
-						bottom : '-60dp'
-					});
-					self.listview.animate({
-						top : 0,
-						bottom : 0
-					});
-					self.filtervisible = false;
-				} else {
-					colorfilter.animate({
-						top : 0
-					});
-					self.listview.animate({
-						top : '40dp',
-						bottom : '80dp'
-					});
-					pricefilter.animate({
-						bottom : 0
-					});
-					self.filtervisible = true;
-				}
+				(self.filtervisible) ? self.hideFilter() : self.showFilter();
 			});
-			/*			e.menu.add({
-			 showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER,
-			 }).addEventListener("click", function() {
-
-			 });*/
 		};
 	});
-	self.addEventListener('touchmove', function() {
-		if (self.filtervisible) {
-			colorfilter.animate({
-				top : '-60dp'
-			});
-			pricefilter.animate({
-				bottom : '-60dp'
-			});
-			self.listview.animate({
-				top : 0,
-				bottom : 0
-			});
-			self.filtervisible = false;
-		}
-	});
+	self.addEventListener('touchmove', self.hideFilter);
+
 	return self;
 };
