@@ -13,22 +13,27 @@
 		<script type="text/javascript">
 			var map, panorama, streetviewservice;
 			function createPanorama(posi) {
-				streetviewservice.getPanoramaByLocation(new google.maps.LatLng(posi.lat, posi.lng), 150, function(data, status) {
+				streetviewservice.getPanoramaByLocation(new google.maps.LatLng(posi.lat, posi.lng), 1000, function(data, status) {
 					if (status == google.maps.StreetViewStatus.OK) {
-						panorama.setVisible(true);
-						panorama.setPano(data.location.pano);
+
 						panorama.setPov({
 							heading : 10,
 							pitch : 0,
 							zoom : 1.6
 						});
-						panorama.setVisible(true);
+
 						var height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
 						document.getElementById("map-canvas").style.height = height + 'px';
-						panorama.setHeight(height + 'px');
-					}
+						setTimeout(function() {
+							panorama.setPano(data.location.pano);
+							panorama.setVisible(true);
+						}, 200);
+					} else
+						alert('For this place we have no streetview panorama.');
 				});
 			}
+
+
 			google.maps.event.addDomListener(window, 'load', function() {
 				streetviewservice = new google.maps.StreetViewService();
 				panorama = new google.maps.StreetViewPanorama(document.getElementById("map-canvas"), {

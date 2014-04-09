@@ -1,5 +1,5 @@
 exports.create = function() {
-	var RATIO = '70%';
+	var RATIO = '70%', done = false, Map = null;
 	var options = arguments[0] || {};
 	var pois = Ti.App.POIs.getAll();
 	var self = Ti.UI.createWindow({
@@ -9,17 +9,28 @@ exports.create = function() {
 		bottom : '50dp',
 		height : Ti.UI.FILL
 	});
-	self.mapview = require('ui/mapview.widget').create(pois, RATIO);
-	console.log('Info: mapview_widget created');
+	Map = new (require('ui/mapview.widget'))();
+	self.mapview = Map.getView('80%');
+	self.mapview.setHeight(RATIO);
+	self.mapview.setTop(0);
 	self.listview = require('ui/vendors.listview').create(pois, RATIO);
-	console.log('Info: listview_widget created');
 	self.addEventListener('open', function() {
-		console.log('Info: mapwindow opened, try to add mapview to window');
-		if (self.mapview)
-			self.container.add(self.mapview);
-		console.log('Info: mapwindow opened, try to add listview to window');
+		console.log('Info: mapwindow opened!');
 		if (self.listview)
 			self.container.add(self.listview);
+	});
+	self.addEventListener('focus', function() {
+		console.log('Info: mapwindow focused!');
+		if (!done) {
+			done = true;
+			console.log('Info: mapwindow focused, try to add mapview to window');
+			self.container.add(self.mapview);
+			console.log('Info: mapview added');
+			self.mapview.addEventListener('complete', function(_e) {
+				Map.addAnnotations(pois);
+				console.log(_e);
+			});
+		}
 	});
 	self.container.add(require('ui/viewslider.widget').create(RATIO, {
 		onmove : function(RATIO) {

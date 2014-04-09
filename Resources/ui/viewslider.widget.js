@@ -6,7 +6,6 @@ exports.create = function(_ratio,_callbacks) {
 			y : _ratio
 		},
 		minTop : '50dp',
-		maxTop : Ti.Platform.displayCaps.ydpi,
 		width : Ti.UI.FILL,
 		height : '50dp',
 		axis : 'y'

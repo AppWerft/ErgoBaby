@@ -2,8 +2,10 @@ var POIs = function() {
 	this.poismap = require('model/poi').de;
 	if (Ti.Geolocation.lastGeolocation) {
 		this.lastlocation = JSON.parse(Ti.Geolocation.lastGeolocation);
-	} else
+	} else {
 		console.log('Info: "lastlocation" empty');
+		this.lastlocation = {latitude:53.553,longitude:10.0};
+	}	
 	var that = this;
 	Ti.Geolocation.getCurrentPosition(function(_e) {
 		if (_e.success) {

@@ -1,7 +1,7 @@
 exports.create = function(pois, RATIO) {
 	var self = Ti.UI.createListView({
 		sections : [Ti.UI.createListSection({
-			headerTitle : 'Germany',
+			headerTitle : null,
 		})],
 		templates : {
 			'template' : require('ui/TEMPLATES').babydealer
