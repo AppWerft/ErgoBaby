@@ -67,7 +67,7 @@ exports.babydealer = {
 	}]
 };
 
-exports.cats = {
+exports.shopcategories = {
 	properties : {
 		height : Ti.UI.SIZE
 	},
@@ -84,7 +84,7 @@ exports.cats = {
 		type : 'Ti.UI.Label',
 		bindId : 'title',
 		properties : {
-			color : 'orange',
+			color : '#444',
 			width : Ti.UI.FILL,
 			height : '45dip',
 			font : {

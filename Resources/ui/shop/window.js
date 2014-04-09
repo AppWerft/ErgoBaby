@@ -6,7 +6,7 @@ exports.create = function() {
 			headerTitle : null,
 		})],
 		templates : {
-			'template' : require('ui/TEMPLATES').cats
+			'template' : require('ui/TEMPLATES').shopcategories
 		},
 		defaultItemTemplate : 'template'
 	});
@@ -31,7 +31,7 @@ exports.create = function() {
 	}
 	self.listview.getSections()[0].setItems(rows);
 	self.listview.addEventListener('itemclick', function(_e) {
-		require('ui/shop/list').create(_e.itemId).open();
+		require('ui/shop/productlist.window').create(_e.itemId).open();
 	});
 	return self;
 };

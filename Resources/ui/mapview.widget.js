@@ -63,7 +63,6 @@ Map.prototype.addAnnotations = function(pois) {
 		that.view.addAnnotations(annotations2);
 		that.view.selectAnnotation(annotations1[0]);
 	}, 2000);
-
 };
 
 module.exports = Map;

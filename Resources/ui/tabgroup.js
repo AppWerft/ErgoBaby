@@ -49,9 +49,16 @@ exports.create = function() {// this sets the background color of the master UIV
 		activity.actionBar.setDisplayHomeAsUp(false);
 		activity.actionBar.setTitle(' ErgoBaby');
 		activity.onCreateOptionsMenu = function(e) {
+			e.menu.add({
+				title : 'Basket',
+				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
+				icon : '/assets/basket.png'
+			}).addEventListener("click", function() {
+				Ti.Android && Ti.UI.createNotification({
+					message : 'Your basket is empty.'
+				}).show();
+			});
 		};
-
 	});
 	return self;
-	// open tab group
 };
