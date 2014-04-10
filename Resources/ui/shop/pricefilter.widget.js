@@ -11,7 +11,7 @@ exports.create = function() {
 	}));
 	var priceslider = Titanium.UI.createSlider({
 		min : 100,
-		max : 250,
+		max : 200,
 		left : '10dp',
 		right : '110dp',
 		value : 100,

@@ -71,7 +71,13 @@ exports.create = function() {
 		layout : 'vertical',
 		height : Ti.UI.FILL
 	});
-
+	/*self.container.add(Ti.UI.createView({
+		backgroundColor : 'yellow',
+		height : 48,
+		left : 0,
+		width : Ti.Platform.displayCaps.platformWidth / 2 / Ti.Platform.displayCaps.logicalDensityFactor
+	}));
+	*/
 	var videos = require('model/videos').yt;
 	for (var i = 0; i < videos.length; i++) {
 		self.container.add(getPreview(videos[i]));

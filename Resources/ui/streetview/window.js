@@ -12,10 +12,7 @@ exports.create = function(_args) {
 	});
 	self.add(self.web);
 	self.addEventListener('close', function() {
-		if (self.web) {
-			self.web = null;
-			self=null;
-		}
+		
 	});
 	return self;
 };

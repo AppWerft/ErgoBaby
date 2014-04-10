@@ -1,6 +1,8 @@
 exports.create = function() {
 	function getPreview(_v) {
-		var w = Ti.Platform.displayCaps.xdpi;
+		
+	
+		var w = Ti.Platform.displayCaps.platformWidth /  Ti.Platform.displayCaps.logicalDensityFactor;
 		var self = Ti.UI.createView({
 			height : Ti.UI.SIZE,
 			backgroundColor : 'white',

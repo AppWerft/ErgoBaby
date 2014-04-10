@@ -42,7 +42,7 @@ Map.prototype.addAnnotations = function(pois) {
 			latitude : p.lat,
 			longitude : p.lng,
 			title : p.title,
-			image : '/assets/appicon.png',
+			image :'/assets/'+Ti.Platform.displayCaps.density+'-pin.png',	
 			subtitle : p.address.replace(/\n/g, ' '),
 			itemId : JSON.stringify(p)
 		}));
@@ -55,7 +55,7 @@ Map.prototype.addAnnotations = function(pois) {
 				latitude : p.lat,
 				longitude : p.lng,
 				title : p.title,
-				image : '/assets/appicon.png',
+				image : '/assets/'+Ti.Platform.displayCaps.density+'-pin.png',
 				subtitle : p.address.replace(/\n/g, ' '),
 				itemId : JSON.stringify(p)
 			}));

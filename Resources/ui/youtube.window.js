@@ -38,5 +38,16 @@ exports.create = function(_args) {
 		videoPlayer.release();
 		//videoPlayer.play();
 	});
+	self.addEventListener("open", function() {
+		if (Ti.Android) {
+			var activity = self.getActivity();
+			if (activity.actionBar) {
+				activity.actionBar.setDisplayHomeAsUp(true);
+				activity.actionBar.onHomeIconItemSelected = function() {
+					self.close();
+				};
+			}
+		}
+	});
 
 };

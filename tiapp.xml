@@ -81,6 +81,7 @@
         <module platform="iphone">ti.draggable</module>
         <module platform="android">ti.draggable</module>
         <module platform="android">com.alcoapps.actionbarextras</module>
+        <module platform="android">com.gbaldera.titouchgallery</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>

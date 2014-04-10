@@ -17,7 +17,7 @@ exports.create = function(_args) {
 				}).show();
 				var routeoptions = {
 					color : '#009900',
-					width : 10,
+					width : 2 + parseInt(500 / Ti.Platform.displayCaps.dpi * Ti.Platform.displayCaps.logicalDensityFactor, 10),
 					points : _res.route,
 				};
 				route = Ti.Map.createRoute(routeoptions);
@@ -51,7 +51,7 @@ exports.create = function(_args) {
 	self.mapview.addAnnotation(Ti.Map.createAnnotation({
 		latitude : _args.lat,
 		longitude : _args.lng,
-		image : '/assets/appicon.png'
+		image : '/assets/' + Ti.Platform.displayCaps.density + '-pin.png'
 	}));
 	self.listview = Ti.UI.createListView({
 		sections : [Ti.UI.createListSection({
@@ -87,7 +87,6 @@ exports.create = function(_args) {
 					title : name,
 					showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER,
 					checkable : true,
-					icon : '/assets/sv.png',
 					checked : (i) ? false : true,
 					visible : true
 				}).addEventListener("click", function() {
@@ -102,7 +101,7 @@ exports.create = function(_args) {
 			e.menu.add({
 				title : 'StreetView',
 				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
-				icon : '/assets/sv.png'
+				icon : Ti.App.Android.R.drawable.ic_action_streetview,
 			}).addEventListener("click", function() {
 				require('ui/streetview/window').create(_args).open();
 			});
