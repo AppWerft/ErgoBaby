@@ -1,5 +1,6 @@
 var POIs = function() {
 	this.poismap = require('model/poi').de;
+	Ti.Geolocation.purpose= 'Retriving your position for routing to next vendor.';
 	if (Ti.Geolocation.lastGeolocation) {
 		this.lastlocation = JSON.parse(Ti.Geolocation.lastGeolocation);
 	} else {
@@ -10,7 +11,7 @@ var POIs = function() {
 	Ti.Geolocation.getCurrentPosition(function(_e) {
 		if (_e.success) {
 			console.log('Info: location from hardware detected');
-			Ti.UI.createNotification({
+			Ti.Android &&Ti.UI.createNotification({
 				message : 'Your location detected.'
 			}).show();
 			that.lastlocation = _e.coords;

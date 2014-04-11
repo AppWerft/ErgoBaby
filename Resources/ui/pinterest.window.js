@@ -21,22 +21,22 @@ exports.create = function() {
 			bottom : 0,
 			width : w / 2,
 			touchEnabled : false,
-			height : 25,
+			height : 20,
 			backgroundColor : 'black',
 			opacity : 0.5
 		}));
 		self.add(Ti.UI.createLabel({
 			left : 3,
 			right : 3,
-			bottom : 2,
-			height : 25,
+			bottom : 1,
+			height : 20,
 			textAlign : 'center',
 			width : Ti.UI.FILL,
 			touchEnabled : false,
 			text : _v.title,
-			color : '#a00',
+			color : '#f66',
 			font : {
-				fontSize : 16,
+				fontSize : 12,
 				fontFamily : 'Centabel Book'
 			}
 		}));
@@ -48,23 +48,28 @@ exports.create = function() {
 	var pins = [];
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
-		layout : 'horizontal'
+		backgroundColor : 'white',
+		title : 'Ergobaby @ Pinterest'
 	});
 	self.containers = [Ti.UI.createScrollView({
 		scrollType : 'vertical',
 		layout : 'vertical',
 		left : 0,
-
+		contentWidth : '50%',
+		contentHeight : Ti.UI.SIZE,
 		width : '50%',
 		height : Ti.UI.FILL
 	}), Ti.UI.createScrollView({
 		scrollType : 'vertical',
 		layout : 'vertical',
-
-		left : 0,
+		contentWidth : '50%',
+		contentHeight : Ti.UI.SIZE,
+		right : 0,
 		width : '50%',
 		height : Ti.UI.FILL
 	})];
+	self.add(self.containers[0]);
+	self.add(self.containers[1]);
 	setTimeout(function() {
 		var walls = require('model/pinwalls').walls;
 		for (var i = 0; i < walls.length; i++) {
@@ -72,8 +77,7 @@ exports.create = function() {
 				self.containers[i % 2].add(getPreview(walls[i]));
 		}
 	}, 100);
-	self.add(self.containers[0]);
-	self.add(self.containers[1]);
+
 	for (var i = 0; i < 2; i++)
 		self.containers[i].addEventListener('click', function(_e) {
 			var id = _e.source.itemId.toLowerCase().replace(/[^a-z]+/g, '-').replace(/[\-]+/g, '-').replace(/^\-/, '').replace(/\-$/, '');
@@ -84,7 +88,10 @@ exports.create = function() {
 				title : _e.source.itemId
 			});
 			win.add(web);
-			win.open();
+			if (Ti.Android)
+				win.open();
+			else
+				self.tab.open(win);
 		});
 	return self;
 };

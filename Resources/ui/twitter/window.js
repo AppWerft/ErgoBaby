@@ -1,7 +1,8 @@
 exports.create = function() {
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
-		backgroundColor : '#fff'
+		backgroundColor : '#fff',
+		title : 'ErgoBaby @ twitter'
 	});
 	self.tweetList = Ti.UI.createTableView({
 		height : Ti.UI.FILL,
@@ -21,8 +22,6 @@ exports.create = function() {
 			self.tweetList.setData(data);
 		});
 	}
-
-
 	self.add(self.tweetList);
 	self.addEventListener('reload!', function() {
 		updateTweetsOnGUI();
@@ -36,7 +35,6 @@ exports.create = function() {
 		});
 	});
 	updateTweetsOnGUI();
-
 	return self;
 };
 

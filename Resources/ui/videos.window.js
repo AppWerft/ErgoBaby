@@ -3,7 +3,7 @@ var youtube = require('vendor/youtube');
 exports.create = function() {
 	function getPreview(_v) {
 		var self = Ti.UI.createView({
-			height : 110,
+			height : 100,
 			opacity : 0.5,
 			backgroundColor : 'white',
 			borderWidth : 0.5,
@@ -65,10 +65,15 @@ exports.create = function() {
 	var ready = false;
 	var pins = [];
 	var self = Ti.UI.createWindow({
-		fullscreen : true
+		fullscreen : true,
+		title : 'HOWTO Videos',backgroundColor : 'white'
 	});
 	self.container = Ti.UI.createScrollView({
 		scrollType : 'vertical',
+		width : Ti.UI.FILL,
+		contentWidth : Ti.UI.FILL,
+		height : Ti.UI.FILL,
+		contentHeight : Ti.UI.SIZE,
 		layout : 'vertical',
 		height : Ti.UI.FILL
 	});

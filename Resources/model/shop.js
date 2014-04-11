@@ -47,11 +47,6 @@ module.exports = [{
 		color : "Camel",
 		price : "109.90",
 		image : "http://www.ergobaby.de/media/catalog/product/cache/11/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/b/c/bc6canl_l.jpg"
-	}, {
-		title : "",
-		color : "",
-		price : "",
-		image : ""
 	}]
 }, {
 	title : "Organic Kollektion",
@@ -84,21 +79,6 @@ module.exports = [{
 		description : "Der Ergobaby Organic Carrier besteht zu 100 Prozent aus kbA-Baumwolle, d.h. aus kontrolliert biologischem Anbau. Damit ist er der „grünste“ Carrier auf dem Markt. Im Fokus steht nicht nur, nachhaltige Produktion zu fördern, sondern auch Ihnen und Ihrem Baby die Gewissheit einer Babytrage zu gewährleisten, die ergonomische und ökologische Aspekte perfekt verbindet – für die gesunde Entwicklung Ihres Kindes – heute und in Zukunft!.",
 		bigimage : "http://www.ergobaby.de/media/catalog/product/cache/11/image/9df78eab33525d08d6e5fb8d27136e95/2/0/209.jpg",
 		image : "http://www.ergobaby.de/media/catalog/product/cache/11/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/b/c/bco25220nl_l_1.jpg"
-	}, {
-		title : "",
-		color : "",
-		price : "",
-		image : ""
-	}, {
-		title : "",
-		color : "",
-		price : "",
-		image : ""
-	}, {
-		title : "",
-		color : "",
-		price : "",
-		image : ""
 	}]
 }, {
 	title : "Performance Kollektion",

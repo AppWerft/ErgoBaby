@@ -1,4 +1,4 @@
-exports.create = function(pois, RATIO) {
+exports.create = function(parent, pois, RATIO) {
 	var self = Ti.UI.createListView({
 		sections : [Ti.UI.createListSection({
 			headerTitle : null,
@@ -33,7 +33,11 @@ exports.create = function(pois, RATIO) {
 		self.setSections(self.sections);
 	}, 20);
 	self.addEventListener('itemclick', function(_e) {
-		require('ui/vendorpath2.window').create(JSON.parse(_e.itemId)).open();
+		var win = require('ui/vendorpath2.window').create(JSON.parse(_e.itemId));
+		if (Ti.Android)
+			win.open();
+		else
+			parent.tab.open(win);
 	});
 	return self;
 };

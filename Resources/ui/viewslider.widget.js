@@ -5,9 +5,9 @@ exports.create = function(_ratio,_callbacks) {
 			x : '50%',
 			y : _ratio
 		},
-		minTop : '50dp',
+		minTop : 50,
 		width : Ti.UI.FILL,
-		height : '50dp',
+		height : 50,
 		axis : 'y'
 	});
 	self.add(Ti.UI.createView({

@@ -79,8 +79,9 @@ exports.create = function(_args) {
 		}
 	});
 	self.add(self.slider);
-	self.addEventListener('open', function() {
+	Ti.Android && self.addEventListener('open', function() {
 		var activity = self.getActivity();
+		
 		activity.onCreateOptionsMenu = function(e) {
 			var addMenu = function(i, name) {
 				e.menu.add({

@@ -1,8 +1,9 @@
-var abextras = require('com.alcoapps.actionbarextras');
 
-exports.create = function(title) {
+
+exports.create = function() {
+	var options = arguments[0] || {};
 	var self = require('vendor/window').create({
-		title : 'ErgoBaby'
+		title : options.title
 	});
 	self.filtervisible = false;
 	maxprice =0;
@@ -64,16 +65,16 @@ exports.create = function(title) {
 								accessoryType : (item.bigimage) ?Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE:Ti.UI.LIST_ACCESSORY_TYPE_NONE,
 								itemId : JSON.stringify(item)
 							},
-							title : {
+							itemtitle : {
 								text : item.title
 							},
-							color : {
+							itemcolor : {
 								text : 'Color: ' + item.color || 'unknown'
 							},
-							price : {
+							itemprice : {
 								text : 'Price: ' + parseFloat(item.price).toFixed(2) + ' €'
 							},
-							image : {
+							thumb : {
 								image : item.image
 							}
 						});
@@ -93,9 +94,8 @@ exports.create = function(title) {
 	});
 	self.add(colorfilter);
 	self.add(pricefilter);
-	self.addEventListener('open', function() {
-		if (!Ti.Android)
-			return;
+	Ti.Android && self.addEventListener('open', function() {
+		var abextras = require('com.alcoapps.actionbarextras');	
 		var activity = self.getActivity();
 		if (!activity.actionBar)
 			return;
@@ -124,7 +124,8 @@ exports.create = function(title) {
 	});
 	self.addEventListener('touchmove', self.hideFilter);
 	self.addEventListener('itemclick', function(_e){
-		require('ui/shop/product.window').create(JSON.parse(_e.itemId)).open();
+		var win = require('ui/shop/product.window').create(JSON.parse(_e.itemId));
+		if (Ti.Android) win.open(); else self.tab.open(win);
 	});
 
 	return self;

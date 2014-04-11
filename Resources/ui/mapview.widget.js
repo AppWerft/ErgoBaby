@@ -33,7 +33,7 @@ Map.prototype.getView = function() {
 
 Map.prototype.addAnnotations = function(pois) {
 	var annotations1 = annotations2 = [],that=this;
-	Ti.UI.createNotification({
+	Ti.Android && Ti.UI.createNotification({
 		message : 'Adding of ' + pois.length + ' vendors'
 	}).show();
 	for (var i = 0; i < pois.length && i < 100; i++) {

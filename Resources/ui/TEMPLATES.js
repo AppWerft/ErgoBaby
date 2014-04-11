@@ -76,41 +76,42 @@ exports.shopcategories = {
 	},
 	childTemplates : [{
 		type : 'Ti.UI.ImageView',
-		bindId : 'image',
+		bindId : 'thumb',
 		properties : {
-			height : '110dp',
-			width : '70dp',
+			height : 110,
+			width : 70,
 			left : 0,
 			top : 0
 		}
 	}, {
 		type : 'Ti.UI.Label',
-		bindId : 'title',
+		bindId : 'categorytitle',
 		properties : {
 			color : '#444',
 			width : Ti.UI.FILL,
-			height : '45dip',
+			text : 'CategoryName',
+			height : 45,
 			font : {
-				fontSize : '19dp',
+				fontSize : 19,
 				fontWeight : 'bold',
 				fontFamily : 'Centabel Book'
 			},
-			left : '80dp',
+			left : 80,
 			top : 0
 		}
 	}, {
 		type : 'Ti.UI.Label',
-		bindId : 'description',
+		bindId : 'categorydescription',
+		text : 'Categorydescription',
 		properties : {
 			color : '#333',
-
 			font : {
 				fontSize : '14dp',
 				fontFamily : 'Centabel Book'
 			},
-			left : '80dip',
-			right : '20dp',
-			top : '36dip'
+			left : 80,
+			right : 20,
+			top : 36
 		}
 	}]
 };
@@ -121,20 +122,20 @@ exports.items = {
 	},
 	childTemplates : [{
 		type : 'Ti.UI.ImageView',
-		bindId : 'image',
+		bindId : 'thumb',
 		properties : {
-			height : '80dp',
-			width : '50dp',
+			height : 80,
+			width : 50,
 			left : 0,
 			top : 0
 		}
 	}, {
 		type : 'Ti.UI.Label',
-		bindId : 'title',
+		bindId : 'itemtitle',
 		properties : {
 			color : 'orange',
 			width : Ti.UI.FILL,
-			height : '45dip',
+			height : 45,
 			font : {
 				fontSize : '19dp',
 				fontWeight : 'bold',
@@ -145,10 +146,10 @@ exports.items = {
 		}
 	}, {
 		type : 'Ti.UI.Label',
-		bindId : 'color',
+		bindId : 'itemcolor',
 		properties : {
 			color : '#333',
-
+			height: 20,
 			font : {
 				fontSize : '14dp',
 				fontFamily : 'Centabel Book'
@@ -160,11 +161,12 @@ exports.items = {
 		}
 	}, {
 		type : 'Ti.UI.Label',
-		bindId : 'price',
+		bindId : 'itemprice',
 		properties : {
-			color : '#333',
+			color : '#333', height:20,
 			font : {
-				fontSize : '14dp',fontFamily:'Centabel Book'
+				fontSize : '14dp',
+				fontFamily : 'Centabel Book'
 			},
 			left : '60dip',
 			right : '20dp',
@@ -187,7 +189,8 @@ exports.steps = {
 			height : '45dip',
 			font : {
 				fontSize : '19dp',
-				fontWeight : 'bold',fontFamily:'Centabel Book'
+				fontWeight : 'bold',
+				fontFamily : 'Centabel Book'
 			},
 			left : '60dp',
 			top : 0
@@ -199,7 +202,8 @@ exports.steps = {
 			color : '#333',
 
 			font : {
-				fontSize : '14dp',fontFamily:'Centabel Book'
+				fontSize : '14dp',
+				fontFamily : 'Centabel Book'
 			},
 			left : '60dip',
 			right : '20dp',

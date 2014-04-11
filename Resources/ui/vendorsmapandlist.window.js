@@ -3,6 +3,7 @@ exports.create = function() {
 	var options = arguments[0] || {};
 	var pois = Ti.App.POIs.getAll();
 	var self = Ti.UI.createWindow({
+		title : options.title,
 		fullscreen : true
 	});
 	self.container = Ti.UI.createView({
@@ -13,7 +14,7 @@ exports.create = function() {
 	self.mapview = Map.getView('80%');
 	self.mapview.setHeight(RATIO);
 	self.mapview.setTop(0);
-	self.listview = require('ui/vendors.listview').create(pois, RATIO);
+	self.listview = require('ui/vendors.listview').create(self, pois, RATIO);
 	self.addEventListener('open', function() {
 		console.log('Info: mapwindow opened!');
 		if (self.listview)

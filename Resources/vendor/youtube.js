@@ -1,5 +1,9 @@
 module.exports = function(videoId, callback) {
 	var url = 'http://m.youtube.com/watch?ajax=1&layout=mobile&tsp=1&utcoffset=330&v=' + videoId;
+	if (Ti.App.Properties.hasProperty('YT_'+url)) {
+		callback(null, Ti.App.Properties.getString('YT_'+url));
+		return null;
+	}
 	var referer = 'http://www.youtube.com/watch?v=' + videoId;
 	var xhr = Ti.Network.createHTTPClient({
 		onload : function(e) {
@@ -21,13 +25,13 @@ module.exports = function(videoId, callback) {
 				callback('cannot retrieve video');
 				return;
 			}
-
+			Ti.App.Properties.setString('YT_'+url, streamUrl);
 			callback(null, streamUrl);
 		},
 		onerror : function(e) {
 			callback(e.error);
 		},
-		timeout : 20000 // in milliseconds
+		timeout : 60000 // in milliseconds
 	});
 
 	xhr.open("GET", url);
@@ -43,4 +47,4 @@ module.exports = function(videoId, callback) {
 
 	xhr.send();
 
-}; 
+};
