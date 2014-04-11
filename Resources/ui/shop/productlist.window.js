@@ -5,6 +5,7 @@ exports.create = function(title) {
 		title : 'ErgoBaby'
 	});
 	self.filtervisible = false;
+	maxprice =0;
 	self.showFilter = function() {
 		colorfilter.animate({
 			top : 0
@@ -76,6 +77,7 @@ exports.create = function(title) {
 								image : item.image
 							}
 						});
+						if (maxprice <item.price) maxprice=item.price;
 				}
 			}
 		}

@@ -1,8 +1,6 @@
 exports.create = function() {
 	function getPreview(_v) {
-		
-	
-		var w = Ti.Platform.displayCaps.platformWidth /  Ti.Platform.displayCaps.logicalDensityFactor;
+		var w = Ti.Platform.displayCaps.platformWidth / Ti.Platform.displayCaps.logicalDensityFactor;
 		var self = Ti.UI.createView({
 			height : Ti.UI.SIZE,
 			backgroundColor : 'white',
@@ -39,7 +37,7 @@ exports.create = function() {
 			color : '#a00',
 			font : {
 				fontSize : 16,
-				fontFamily : 'Droid Sans'
+				fontFamily : 'Centabel Book'
 			}
 		}));
 		return self;
@@ -67,12 +65,13 @@ exports.create = function() {
 		width : '50%',
 		height : Ti.UI.FILL
 	})];
-
-	var walls = require('model/pinwalls').walls;
-	for (var i = 0; i < walls.length; i++) {
-		if (walls[i].image)
-			self.containers[i % 2].add(getPreview(walls[i]));
-	}
+	setTimeout(function() {
+		var walls = require('model/pinwalls').walls;
+		for (var i = 0; i < walls.length; i++) {
+			if (walls[i].image)
+				self.containers[i % 2].add(getPreview(walls[i]));
+		}
+	}, 100);
 	self.add(self.containers[0]);
 	self.add(self.containers[1]);
 	for (var i = 0; i < 2; i++)
@@ -87,8 +86,6 @@ exports.create = function() {
 			win.add(web);
 			win.open();
 		});
-
 	return self;
-
 };
 

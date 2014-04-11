@@ -5,7 +5,8 @@ exports.create = function(tweet) {
 		hasDetails : true,
 		height : Ti.UI.SIZE
 	});
-	if (!tweet) return row;
+	if (!tweet)
+		return row;
 	row.add(Ti.UI.createLabel({
 		text : tweet.user.name + ', ' + tweet.user.location,
 		top : '5dp',
@@ -14,19 +15,21 @@ exports.create = function(tweet) {
 		color : 'silver',
 		height : '24dp',
 		font : {
-			fontSize : '14dp'
+			fontSize : '14dp',
+			fontFamily : 'Centabel Book'
 
 		}
 	}));
 	row.add(Ti.UI.createLabel({
-		text : tweet.text,
+		text : tweet.text.replace(/&amp;/g,'&'),
 		top : '25dp',
 		bottom : '10dp',
 		left : '80dp',
 		right : '5dp',
 		color : 'black',
 		font : {
-			fontSize : '16dp'
+			fontSize : '16dp',
+			fontFamily : 'Centabel Book'
 
 		},
 		height : Ti.UI.SIZE

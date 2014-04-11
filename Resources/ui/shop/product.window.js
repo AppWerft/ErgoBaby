@@ -1,7 +1,7 @@
 var abextras = require('com.alcoapps.actionbarextras');
 var titouchgallery = require("com.gbaldera.titouchgallery");
 exports.create = function(_product) {
-	var w = Ti.Platform.displayCaps.xdpi;
+	var w = Ti.Platform.displayCaps.platformWidth /  Ti.Platform.displayCaps.logicalDensityFactor;;
 	var h= w/1.9;
 	var self = require('vendor/window').create({
 		title : _product.title
@@ -28,7 +28,7 @@ exports.create = function(_product) {
 		top : h + 5,
 		color : 'black',
 		left : '10dp',
-		right : '10dp'
+		right : '10dp',font:{fontFamily : 'Centabel Book'}
 	});
 	self.add(description);
 	self.addEventListener('open', function() {
@@ -44,7 +44,7 @@ exports.create = function(_product) {
 			e.menu.add({
 				title : 'Basket',
 				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
-				icon : '/assets/basket.png'
+				icon :  Ti.App.Android.R.drawable.ic_action_basket
 			}).addEventListener("click", function() {
 				Ti.Android && Ti.UI.createNotification({
 					message : 'Your basket is empty.'

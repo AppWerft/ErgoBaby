@@ -31,6 +31,7 @@ exports.babydealer = {
 				height : Ti.UI.SIZE,
 				font : {
 					fontSize : '19dp',
+					fontFamily : 'Centabel Book',
 					fontWeight : 'bold'
 				},
 				left : 0,
@@ -43,7 +44,8 @@ exports.babydealer = {
 				color : '#333',
 				text : 'Address',
 				font : {
-					fontSize : '14dp'
+					fontSize : '14dp',
+					fontFamily : 'Centabel Book'
 
 				},
 				height : Ti.UI.SIZE,
@@ -59,6 +61,7 @@ exports.babydealer = {
 				height : Ti.UI.SIZE,
 				font : {
 					fontSize : '10dp',
+					fontFamily : 'Centabel Book'
 				},
 				right : 0,
 				top : 0
@@ -89,7 +92,8 @@ exports.shopcategories = {
 			height : '45dip',
 			font : {
 				fontSize : '19dp',
-				fontWeight : 'bold'
+				fontWeight : 'bold',
+				fontFamily : 'Centabel Book'
 			},
 			left : '80dp',
 			top : 0
@@ -101,7 +105,8 @@ exports.shopcategories = {
 			color : '#333',
 
 			font : {
-				fontSize : '14dp'
+				fontSize : '14dp',
+				fontFamily : 'Centabel Book'
 			},
 			left : '80dip',
 			right : '20dp',
@@ -132,7 +137,8 @@ exports.items = {
 			height : '45dip',
 			font : {
 				fontSize : '19dp',
-				fontWeight : 'bold'
+				fontWeight : 'bold',
+				fontFamily : 'Centabel Book'
 			},
 			left : '60dp',
 			top : 0
@@ -144,7 +150,8 @@ exports.items = {
 			color : '#333',
 
 			font : {
-				fontSize : '14dp'
+				fontSize : '14dp',
+				fontFamily : 'Centabel Book'
 			},
 			left : '60dip',
 			right : '20dp',
@@ -157,7 +164,7 @@ exports.items = {
 		properties : {
 			color : '#333',
 			font : {
-				fontSize : '14dp'
+				fontSize : '14dp',fontFamily:'Centabel Book'
 			},
 			left : '60dip',
 			right : '20dp',
@@ -180,7 +187,7 @@ exports.steps = {
 			height : '45dip',
 			font : {
 				fontSize : '19dp',
-				fontWeight : 'bold'
+				fontWeight : 'bold',fontFamily:'Centabel Book'
 			},
 			left : '60dp',
 			top : 0
@@ -192,7 +199,7 @@ exports.steps = {
 			color : '#333',
 
 			font : {
-				fontSize : '14dp'
+				fontSize : '14dp',fontFamily:'Centabel Book'
 			},
 			left : '60dip',
 			right : '20dp',

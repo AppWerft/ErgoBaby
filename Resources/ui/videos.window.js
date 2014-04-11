@@ -10,7 +10,6 @@ exports.create = function() {
 			borderColor : 'gray',
 			itemId : _v
 		});
-
 		self.add(Ti.UI.createImageView({
 			left : 0,
 			width : 160,
@@ -32,7 +31,8 @@ exports.create = function() {
 			color : '#444',
 			font : {
 				fontWeight : 'bold',
-				fontSize : 19
+				fontSize : 19,
+				fontFamily : 'Centabel Book'
 			}
 		}));
 		self.add(Ti.UI.createLabel({
@@ -46,7 +46,8 @@ exports.create = function() {
 			text : 'Laufzeit: ' + _v.duration,
 			color : '#222',
 			font : {
-				fontSize : 12
+				fontSize : 12,
+				fontFamily : 'Centabel Book'
 			}
 		}));
 		youtube(_v.id, function(err, clip_url) {
@@ -72,12 +73,12 @@ exports.create = function() {
 		height : Ti.UI.FILL
 	});
 	/*self.container.add(Ti.UI.createView({
-		backgroundColor : 'yellow',
-		height : 48,
-		left : 0,
-		width : Ti.Platform.displayCaps.platformWidth / 2 / Ti.Platform.displayCaps.logicalDensityFactor
-	}));
-	*/
+	 backgroundColor : 'yellow',
+	 height : 48,
+	 left : 0,
+	 width : Ti.Platform.displayCaps.platformWidth / 2 / Ti.Platform.displayCaps.logicalDensityFactor
+	 }));
+	 */
 	var videos = require('model/videos').yt;
 	for (var i = 0; i < videos.length; i++) {
 		self.container.add(getPreview(videos[i]));
