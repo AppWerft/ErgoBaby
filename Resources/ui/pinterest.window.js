@@ -3,7 +3,7 @@ exports.create = function() {
 		var w = Ti.Platform.displayCaps.platformWidth / Ti.Platform.displayCaps.logicalDensityFactor;
 		var self = Ti.UI.createView({
 			height : Ti.UI.SIZE,
-			backgroundColor : 'white',
+			backgroundColor : 'white',barColor : '#CF6500',
 			itemId : _v.title,
 			width : Ti.UI.FILL
 		});
@@ -48,7 +48,7 @@ exports.create = function() {
 	var pins = [];
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
-		backgroundColor : 'white',
+		barColor : '#CF6500',
 		title : 'Ergobaby @ Pinterest'
 	});
 	self.containers = [Ti.UI.createScrollView({

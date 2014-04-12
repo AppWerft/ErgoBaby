@@ -1,6 +1,7 @@
 exports.create = function() {// this sets the background color of the master UIView (when there are no windows/tab groups on it)
 	var self = Ti.UI.createTabGroup({
 		fullscreen : true
+		
 	});
 	var tab1 = Ti.UI.createTab({
 		title : 'Videos',
@@ -12,7 +13,7 @@ exports.create = function() {// this sets the background color of the master UIV
 	var tab2 = Ti.UI.createTab({
 		title : 'Shop',
 		icon : '/assets/76-baby.png',
-		window : require('ui/shop/window').create({
+		window : require('ui/shop/categoryselector.window').create({
 			title : 'Shop'
 		})
 	});
@@ -24,13 +25,15 @@ exports.create = function() {// this sets the background color of the master UIV
 		})
 	});
 	var tab4 = Ti.UI.createTab({
-		title : 'Pinterest',icon:'/assets/pinterest_icon.png',
+		title : 'Pinterest',
+		icon : '/assets/pinterest_icon.png',
 		window : require('ui/pinterest.window').create({
 			title : 'Pinterest'
 		})
 	});
 	var tab5 = Ti.UI.createTab({
-		title : 'Twitter',icon : '/assets/210-twitterbird.png',
+		title : 'Twitter',
+		icon : '/assets/210-twitterbird.png',
 		window : require('ui/twitter/window').create({
 			title : 'Twitter'
 		})
@@ -46,6 +49,7 @@ exports.create = function() {// this sets the background color of the master UIV
 	self.addTab(tab5);
 	//self.addTab(tab6);
 	self.open();
+	self.setActiveTab(1);
 	Ti.Android && self.addEventListener('open', function() {
 		var activity = self.getActivity();
 		if (!activity.actionBar)

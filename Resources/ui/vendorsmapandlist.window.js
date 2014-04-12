@@ -3,13 +3,14 @@ exports.create = function() {
 	var options = arguments[0] || {};
 	var pois = Ti.App.POIs.getAll();
 	var self = Ti.UI.createWindow({
-		title : options.title,
+		title : options.title,barColor : '#CF6500',
 		fullscreen : true
 	});
-	self.container = Ti.UI.createView({
-		bottom : '50dp',
-		height : Ti.UI.FILL
-	});
+	self.container = Ti.UI.createView();
+	if (Ti.Android)
+		self.container.bottom = '50dp';
+	else
+		self.container.top = '50dp';
 	Map = new (require('ui/mapview.widget'))();
 	self.mapview = Map.getView('80%');
 	self.mapview.setHeight(RATIO);
@@ -45,9 +46,16 @@ exports.create = function() {
 			self.mapview.setRegion(region);
 		}
 	}));
-	self.add(self.container);
 	self.countries = require('ui/flags.widget').create();
-	self.add(self.countries);
+	if (Ti.Android) {
+		self.add(self.container);
+		self.add(self.countries);
+		self.countries.top = 0;
+	} else {
+		self.add(self.countries);
+		self.add(self.container);
+		self.countries.bottom = 0;
+	}
 	self.countries.addEventListener('flagclick', function(_res) {
 		self.mapview.setRegion(_res.region);
 	});

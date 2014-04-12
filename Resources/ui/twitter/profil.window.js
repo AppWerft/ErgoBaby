@@ -1,7 +1,6 @@
 exports.create = function(_user) {
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
-		navBarHidden : true,
 		backgroundColor : '#00597C'
 	});
 	var scroller = Ti.UI.createScrollView({

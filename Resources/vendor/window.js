@@ -2,7 +2,8 @@ exports.create = function() {
 	var options = arguments[0] || {};
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
-		backgroundColor : 'white',
+		
+		barColor : '#CF6500',
 		title : options.title
 	});
 	if (Ti.Android) {

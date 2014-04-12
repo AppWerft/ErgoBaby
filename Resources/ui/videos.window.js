@@ -1,15 +1,15 @@
-var youtube = require('vendor/youtube');
-
 exports.create = function() {
 	function getPreview(_v) {
 		var self = Ti.UI.createView({
 			height : 100,
-			opacity : 0.5,
+			opacity : (Ti.Android) ? 0.5 : 1,
 			backgroundColor : 'white',
 			borderWidth : 0.5,
+			barColor : '#CF6500',
 			borderColor : 'gray',
 			itemId : _v
 		});
+
 		self.add(Ti.UI.createImageView({
 			left : 0,
 			width : 160,
@@ -50,12 +50,10 @@ exports.create = function() {
 				fontFamily : 'Centabel Book'
 			}
 		}));
-		youtube(_v.id, function(err, clip_url) {
-			if (!err && clip_url) {
+		require('vendor/youtube').getClipURL(_v.id, function(clip_url) {
+			if (clip_url != null) {
 				self.setOpacity(1);
 				self.itemId.url = clip_url;
-			} else {
-				console.error(err);
 			}
 		});
 		return self;
@@ -66,7 +64,9 @@ exports.create = function() {
 	var pins = [];
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
-		title : 'HOWTO Videos',backgroundColor : 'white'
+		title : 'HOWTO Videos',
+		barColor : '#CF6500'
+
 	});
 	self.container = Ti.UI.createScrollView({
 		scrollType : 'vertical',
@@ -77,20 +77,20 @@ exports.create = function() {
 		layout : 'vertical',
 		height : Ti.UI.FILL
 	});
-	/*self.container.add(Ti.UI.createView({
-	 backgroundColor : 'yellow',
-	 height : 48,
-	 left : 0,
-	 width : Ti.Platform.displayCaps.platformWidth / 2 / Ti.Platform.displayCaps.logicalDensityFactor
-	 }));
-	 */
+
 	var videos = require('model/videos').yt;
 	for (var i = 0; i < videos.length; i++) {
 		self.container.add(getPreview(videos[i]));
 	}
 	self.add(self.container);
 	self.container.addEventListener('click', function(_e) {
-		require('ui/youtube.window').create(_e.source.itemId);
+		var win = require('ui/youtube.window').create(_e.source.itemId);
+		if (Ti.Android || true)
+			win.open();
+		else {
+			self.tab.open(win);
+			self.tab.bottom = -50;
+		}
 	});
 	return self;
 

@@ -101,7 +101,7 @@ exports.create = function() {
 			return;
 		abextras.setExtras({
 			title : 'ErgoBaby',
-			subtitle : title
+			subtitle : options.title
 		});
 		activity.onCreateOptionsMenu = function(e) {
 			e.menu.add({

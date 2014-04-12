@@ -2,13 +2,17 @@ var DEFAULTCOUNTRY = 'Germany';
 
 exports.create = function() {
 	var self = Ti.UI.createScrollView({
+		top : 0,
 		scrollType : 'horizontal',
 		layout : 'horizontal',
 		backgroundColor : '#333',
 		horizontalWrap : false,
 		height : '50dp',
+		contentHeight : '50dp',
+		width : Ti.UI.FILL,
 		touchEnabled : false,
-		bottom : 0
+		contentWidth : Ti.UI.SIZE,
+		touchEnabled : true,
 	});
 	var dir = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/assets/flags/').getDirectoryListing();
 	var flags = [];
@@ -17,22 +21,28 @@ exports.create = function() {
 		flags[i] = Ti.UI.createImageView({
 			top : 0,
 			left : 0,
-			width : '60dp',
-			right : '2dp',
-			height : '50dp',
-			opacity : (country == DEFAULTCOUNTRY) ? 1 : 0.5,
+			width : 90,
+			right : 2,
+			height : 50,
+			opacity : (country == DEFAULTCOUNTRY) ? 1 : 0.6,
 			image : '/assets/flags/' + dir[i],
-			country : country
+			country : country,
+			borderWidth : 1,
+			borderColor : (country == DEFAULTCOUNTRY) ? 'white' : 'black',
 		});
 		self.add(flags[i]);
 	}
 	self.addEventListener('click', function(_e) {
-		Ti.UI.createNotification({
+		Ti.Android && Ti.UI.createNotification({
 			message : _e.source.country
 		}).show();
-		for (var i = 0; i < flags.length; i++)
+		for (var i = 0; i < flags.length; i++) {
+			flags[i].borderColor = 'black';
 			flags[i].opacity = 0.5;
+		}
 		_e.source.opacity = 1;
+		_e.source.borderColor = 'white';
+
 		Ti.App.POIs.resolveAddress(_e.source.country, function(_region) {
 			self.fireEvent('flagclick', {
 				country : _e.source.country,

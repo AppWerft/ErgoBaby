@@ -2,6 +2,7 @@ exports.create = function() {
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
 		backgroundColor : '#fff',
+		barColor : '#CF6500',
 		title : 'ErgoBaby @ twitter'
 	});
 	self.tweetList = Ti.UI.createTableView({
@@ -9,7 +10,9 @@ exports.create = function() {
 		backgroundColor : '#fff'
 	});
 
-	self.tweetList.addEventListener('click', require('ui/twitter/dialog.widget').create);
+	self.tweetList.addEventListener('click', function(_e) {
+		require('ui/twitter/dialog.widget').create(self, _e);
+	});
 
 	function updateTweetsOnGUI() {
 		Ti.App.Twitter.fetch('search_tweets', 'ErgoBaby', function(_response) {
@@ -22,6 +25,8 @@ exports.create = function() {
 			self.tweetList.setData(data);
 		});
 	}
+
+
 	self.add(self.tweetList);
 	self.addEventListener('reload!', function() {
 		updateTweetsOnGUI();

@@ -82,6 +82,7 @@
         <module platform="android">ti.draggable</module>
         <module platform="android">com.alcoapps.actionbarextras</module>
         <module platform="android">com.gbaldera.titouchgallery</module>
+        <module platform="iphone" version="1.0.1">com.obscure.ticarousel</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
