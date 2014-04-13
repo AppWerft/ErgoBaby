@@ -1,23 +1,31 @@
+var get_yt_clip = require('vendor/get_yt_clip');
+
 exports.create = function() {
 	function getPreview(_v) {
 		var self = Ti.UI.createView({
 			height : Ti.UI.SIZE,
 			opacity : (Ti.Android) ? 0.5 : 1,
 			backgroundColor : 'white',
-			borderWidth : 0.5,
+			borderWidth : 0.4,
 			barColor : '#CF6500',
 			borderColor : 'gray',
-			itemId : _v
 		});
-
-		self.add(Ti.UI.createImageView({
-			left : 0,top:0,
+		self.thumb = Ti.UI.createImageView({
+			left : 0,
+			top : 0,
 			width : 160,
 			touchEnabled : false,
 			defaultImage : '/assets/logo.png',
 			height : 100,
 			image : 'https://i1.ytimg.com/vi/' + _v.id + '/mqdefault.jpg'
-		}));
+		});
+		self.add(self.thumb);
+		self.player = Ti.UI.createImageView({
+			image : '/assets/play.png',
+			touchEnabled : false,
+			width : 24,
+			top : 5
+		});
 		self.add(Ti.UI.createLabel({
 			left : 170,
 			right : 10,
@@ -26,7 +34,6 @@ exports.create = function() {
 			width : Ti.UI.FILL,
 			height : Ti.UI.SIZE,
 			touchEnabled : false,
-
 			text : _v.title,
 			color : '#444',
 			font : {
@@ -50,10 +57,13 @@ exports.create = function() {
 				fontFamily : 'Centabel Book'
 			}
 		}));
-		require('vendor/youtube').getClipURL(_v.id, function(_res) {
-			if (_res.url != null) {
+		get_yt_clip(_v.id, function(_res) {
+			if (_res != null) {
 				self.setOpacity(1);
-				self.itemId.url = _res.url;
+				self.itemId = JSON.stringify({
+					streamurl : _res.streamurl,
+					meta : _res.meta
+				});
 				self.add(Ti.UI.createLabel({
 					left : 10,
 					right : 10,
@@ -61,8 +71,9 @@ exports.create = function() {
 					touchEnabled : false,
 					textAlign : 'left',
 					width : Ti.UI.FILL,
-					height : Ti.UI.SIZE,bottom:5,
-					text : _res.video.description,
+					height : Ti.UI.SIZE,
+					bottom : 5,
+					text : _res.meta.description,
 					color : '#222',
 					font : {
 						fontSize : 14,
@@ -98,13 +109,12 @@ exports.create = function() {
 	}
 	self.add(self.container);
 	self.container.addEventListener('click', function(_e) {
-		var win = require('ui/youtube.window').create(_e.source.itemId);
-		if (Ti.Android)
-			win.open();
-		else {
-			self.tab.fireEvent('hidetabgroup!', {});
-			self.tab.open(win);
-		}
+		var win = require('ui/youtube.window').create(JSON.parse(_e.source.itemId));
+		//if (Ti.Android)
+		win.open();
+		//	else {
+		//		self.tab.open(win);
+		//	}
 	});
 	return self;
 
