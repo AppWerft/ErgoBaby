@@ -1,7 +1,7 @@
 exports.create = function() {// this sets the background color of the master UIView (when there are no windows/tab groups on it)
 	var self = Ti.UI.createTabGroup({
 		fullscreen : true
-		
+
 	});
 	var tab1 = Ti.UI.createTab({
 		title : 'Videos',
@@ -9,6 +9,12 @@ exports.create = function() {// this sets the background color of the master UIV
 		window : require('ui/videos.window').create({
 			title : 'Videos'
 		})
+	});
+	tab1.addEventListener('hidetabgroup!', function() {
+		self.setBottom(-50);
+	});
+	tab1.addEventListener('showtabgroup!', function() {
+		self.bottom = 0;
 	});
 	var tab2 = Ti.UI.createTab({
 		title : 'Shop',

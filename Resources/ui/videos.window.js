@@ -1,7 +1,7 @@
 exports.create = function() {
 	function getPreview(_v) {
 		var self = Ti.UI.createView({
-			height : 100,
+			height : Ti.UI.SIZE,
 			opacity : (Ti.Android) ? 0.5 : 1,
 			backgroundColor : 'white',
 			borderWidth : 0.5,
@@ -11,7 +11,7 @@ exports.create = function() {
 		});
 
 		self.add(Ti.UI.createImageView({
-			left : 0,
+			left : 0,top:0,
 			width : 160,
 			touchEnabled : false,
 			defaultImage : '/assets/logo.png',
@@ -43,17 +43,32 @@ exports.create = function() {
 			textAlign : 'right',
 			width : Ti.UI.FILL,
 			height : Ti.UI.SIZE,
-			text : 'Laufzeit: ' + _v.duration,
+			//text : 'Laufzeit: ' + _v.duration,
 			color : '#222',
 			font : {
 				fontSize : 12,
 				fontFamily : 'Centabel Book'
 			}
 		}));
-		require('vendor/youtube').getClipURL(_v.id, function(clip_url) {
-			if (clip_url != null) {
+		require('vendor/youtube').getClipURL(_v.id, function(_res) {
+			if (_res.url != null) {
 				self.setOpacity(1);
-				self.itemId.url = clip_url;
+				self.itemId.url = _res.url;
+				self.add(Ti.UI.createLabel({
+					left : 10,
+					right : 10,
+					top : 110,
+					touchEnabled : false,
+					textAlign : 'left',
+					width : Ti.UI.FILL,
+					height : Ti.UI.SIZE,bottom:5,
+					text : _res.video.description,
+					color : '#222',
+					font : {
+						fontSize : 14,
+						fontFamily : 'Centabel Book'
+					}
+				}));
 			}
 		});
 		return self;
@@ -72,7 +87,6 @@ exports.create = function() {
 		scrollType : 'vertical',
 		width : Ti.UI.FILL,
 		contentWidth : Ti.UI.FILL,
-		height : Ti.UI.FILL,
 		contentHeight : Ti.UI.SIZE,
 		layout : 'vertical',
 		height : Ti.UI.FILL
@@ -85,11 +99,11 @@ exports.create = function() {
 	self.add(self.container);
 	self.container.addEventListener('click', function(_e) {
 		var win = require('ui/youtube.window').create(_e.source.itemId);
-		if (Ti.Android || true)
+		if (Ti.Android)
 			win.open();
 		else {
+			self.tab.fireEvent('hidetabgroup!', {});
 			self.tab.open(win);
-			self.tab.bottom = -50;
 		}
 	});
 	return self;

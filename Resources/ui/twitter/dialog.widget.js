@@ -28,10 +28,10 @@ exports.create = function(_parent, _e) {
 		options : options,
 		title : tweetdata.user.name
 	});
-
 	dialog.show();
 	dialog.addEventListener('click', function(_d) {
 		switch(_d.index) {
+			
 			case 0:
 				var win = require('ui/twitter/profil.window').create({
 					title : tweetdata.user

@@ -56,11 +56,11 @@ exports.create = function() {
 		}
 		Ti.App.Carousel = require('com.obscure.ticarousel');
 		self.carousel = Ti.App.Carousel.createCarouselView({
-			top : 10,
+			top : 0,
 			carouselType : Ti.App.Carousel.CAROUSEL_TYPE_CYLINDER,
 			views : views,
-			itemWidth : 300,
-			numberOfVisibleItems : 5,
+			itemWidth : 350,
+			numberOfVisibleItems : 7,
 			wrap : true,
 		});
 		self.add(self.carousel);
@@ -90,7 +90,7 @@ exports.create = function() {
 			textAlign : 'center',
 			height : 30,
 			font : {
-				fontSize : 24,
+				fontSize : 26,
 				fontFamily : 'Centabel Book'
 			}
 		});

@@ -1,12 +1,18 @@
-
-
 exports.create = function() {
 	var options = arguments[0] || {};
 	var self = require('vendor/window').create({
 		title : options.title
 	});
+	var filterbutton = Ti.UI.createButton({
+		title : 'Filter'
+	});
+	filterbutton.addEventListener('click', function() {
+		(self.filtervisible) ? self.hideFilter() : self.showFilter();
+	});
+	self.rightNavButton = filterbutton;
+
 	self.filtervisible = false;
-	maxprice =0;
+	maxprice = 0;
 	self.showFilter = function() {
 		colorfilter.animate({
 			top : 0
@@ -62,7 +68,7 @@ exports.create = function() {
 					if (item.title && item.price < maxprice)
 						itemdata.push({
 							properties : {
-								accessoryType : (item.bigimage) ?Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE:Ti.UI.LIST_ACCESSORY_TYPE_NONE,
+								accessoryType : (item.bigimage) ? Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE : Ti.UI.LIST_ACCESSORY_TYPE_NONE,
 								itemId : JSON.stringify(item)
 							},
 							itemtitle : {
@@ -78,7 +84,8 @@ exports.create = function() {
 								image : item.image
 							}
 						});
-						if (maxprice <item.price) maxprice=item.price;
+					if (maxprice < item.price)
+						maxprice = item.price;
 				}
 			}
 		}
@@ -95,7 +102,7 @@ exports.create = function() {
 	self.add(colorfilter);
 	self.add(pricefilter);
 	Ti.Android && self.addEventListener('open', function() {
-		var abextras = require('com.alcoapps.actionbarextras');	
+		var abextras = require('com.alcoapps.actionbarextras');
 		var activity = self.getActivity();
 		if (!activity.actionBar)
 			return;
@@ -116,16 +123,19 @@ exports.create = function() {
 			e.menu.add({
 				title : 'Filter',
 				showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM,
-				icon : Ti.App.Android.R.drawable.ic_action_filter	
+				icon : Ti.App.Android.R.drawable.ic_action_filter
 			}).addEventListener("click", function() {
 				(self.filtervisible) ? self.hideFilter() : self.showFilter();
 			});
 		};
 	});
 	self.addEventListener('touchmove', self.hideFilter);
-	self.addEventListener('itemclick', function(_e){
+	self.addEventListener('itemclick', function(_e) {
 		var win = require('ui/shop/product.window').create(JSON.parse(_e.itemId));
-		if (Ti.Android) win.open(); else self.tab.open(win);
+		if (Ti.Android)
+			win.open();
+		else
+			self.tab.open(win);
 	});
 
 	return self;

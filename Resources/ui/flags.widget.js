@@ -7,8 +7,8 @@ exports.create = function() {
 		layout : 'horizontal',
 		backgroundColor : '#333',
 		horizontalWrap : false,
-		height : '50dp',
-		contentHeight : '50dp',
+		height : 44,
+		contentHeight : 44,
 		width : Ti.UI.FILL,
 		touchEnabled : false,
 		contentWidth : Ti.UI.SIZE,
@@ -19,15 +19,15 @@ exports.create = function() {
 	for (var i = 0; i < dir.length; i++) {
 		var country = dir[i].replace(/\.png$/, '');
 		flags[i] = Ti.UI.createImageView({
-			top : 0,
+			top : -10,
 			left : 0,
-			width : 90,
+			width : 64,
 			right : 2,
-			height : 50,
-			opacity : (country == DEFAULTCOUNTRY) ? 1 : 0.6,
+			height : 44,
+			opacity : (country == DEFAULTCOUNTRY) ? 1 : 0.9,
 			image : '/assets/flags/' + dir[i],
 			country : country,
-			borderWidth : 1,
+			borderWidth : 0,
 			borderColor : (country == DEFAULTCOUNTRY) ? 'white' : 'black',
 		});
 		self.add(flags[i]);

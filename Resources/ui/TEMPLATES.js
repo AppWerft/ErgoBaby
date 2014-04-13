@@ -72,7 +72,8 @@ exports.babydealer = {
 
 exports.shopcategories = {
 	properties : {
-		height : Ti.UI.SIZE
+		height : Ti.UI.SIZE,
+		backgroundColor : 'white'
 	},
 	childTemplates : [{
 		type : 'Ti.UI.ImageView',
@@ -118,7 +119,7 @@ exports.shopcategories = {
 
 exports.items = {
 	properties : {
-		height : Ti.UI.SIZE
+		height : Ti.UI.SIZE,backgroundColor : 'white'
 	},
 	childTemplates : [{
 		type : 'Ti.UI.ImageView',
@@ -149,7 +150,7 @@ exports.items = {
 		bindId : 'itemcolor',
 		properties : {
 			color : '#333',
-			height: 20,
+			height : 20,
 			font : {
 				fontSize : '14dp',
 				fontFamily : 'Centabel Book'
@@ -163,7 +164,8 @@ exports.items = {
 		type : 'Ti.UI.Label',
 		bindId : 'itemprice',
 		properties : {
-			color : '#333', height:20,
+			color : '#333',
+			height : 20,
 			font : {
 				fontSize : '14dp',
 				fontFamily : 'Centabel Book'

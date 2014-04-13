@@ -8,9 +8,9 @@ exports.create = function() {
 	});
 	self.container = Ti.UI.createView();
 	if (Ti.Android)
-		self.container.bottom = '50dp';
+		self.container.bottom = 44;
 	else
-		self.container.top = '50dp';
+		self.container.top = 44;
 	Map = new (require('ui/mapview.widget'))();
 	self.mapview = Map.getView('80%');
 	self.mapview.setHeight(RATIO);
